@@ -1,0 +1,33 @@
+jobs:
+- name: get-blobs
+  plan:
+    - get: release
+
+    # - task: process-release # convert from .tar.gz to whatever bosh wants
+
+    # - put: upload-blob
+
+    # - task: commit-and-push-changes
+
+    # - put: create-pull-request
+
+resources:
+- name: release
+  type: github-release
+  source:
+    owner: DefectDojo
+    repository: django-DefectDojo
+    # access_token: ((cg-ci-bot-ghtoken))
+
+# - name: src
+#   type: git
+#   source:
+#     uri: https://github.com/cloud-gov/defectdojo-boshrelease
+#     branch: main
+#     commit_verification_keys: ((cloud-gov-pgp-keys))
+
+resource_types:
+- name: github-release
+  type: registry-image
+  source:
+    repository: concourse/github-release-resource
