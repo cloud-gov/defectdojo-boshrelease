@@ -11,6 +11,7 @@ image_resource:
     semver_constraint: ">= 1.0.0"
 
 run:
-  path: "exit"
+  path: "sh"
   args:
-    - "0"
+    - "-c"
+    - "exit 0"
