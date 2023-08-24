@@ -11,12 +11,13 @@ jobs:
 - name: get-blobs
   plan:
     - get: release
+    - get: src
 
     - task: process-release # convert from .tar.gz to whatever bosh wants
-      file: process-release.yml
+      file: src/ci/process-release.yml
 
     - task: fail
-      file: fail.yml
+      file: src/ci/fail.yml
 
 
     # - put: upload-blob
