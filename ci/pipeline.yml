@@ -16,9 +16,6 @@ jobs:
     - task: process-release # convert from .tar.gz to whatever bosh wants
       file: src/ci/process-release.yml
 
-    - task: fail
-      file: src/ci/fail.yml
-
 
     # - put: upload-blob
 
