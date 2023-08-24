@@ -35,7 +35,7 @@ resources:
   source:
     owner: DefectDojo
     repository: django-DefectDojo
-    # access_token: ((cg-ci-bot-ghtoken))
+    access_token: ((cg-ci-bot-ghtoken))
 
 - name: src
   type: git
