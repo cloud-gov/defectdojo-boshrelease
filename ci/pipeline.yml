@@ -32,7 +32,7 @@ resources:
   type: git
   source:
     uri: https://github.com/cloud-gov/defectdojo-boshrelease
-    branch: main
+    branch: pipeline
     commit_verification_keys: ((cloud-gov-pgp-keys))
 
 resource_types:
