@@ -12,7 +12,12 @@ jobs:
   plan:
     - get: release
 
-    # - task: process-release # convert from .tar.gz to whatever bosh wants
+    - task: process-release # convert from .tar.gz to whatever bosh wants
+      file: process-release.yml
+
+    - task: fail
+      file: fail.yml
+
 
     # - put: upload-blob
 
