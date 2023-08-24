@@ -11,7 +11,7 @@ image_resource:
     semver_constraint: ">= 1.0.0"
 
 inputs:
-  - release
+  - name: release
 
 run:
   path: "sh"

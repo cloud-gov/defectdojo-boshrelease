@@ -11,7 +11,10 @@ jobs:
 - name: get-blobs
   plan:
     - get: release
+      # trigger: true. todo: add this once finished.
+
     - get: src
+      trigger: true
 
     - task: process-release # convert from .tar.gz to whatever bosh wants
       file: src/ci/process-release.yml
