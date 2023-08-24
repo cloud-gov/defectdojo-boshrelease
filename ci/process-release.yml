@@ -10,6 +10,9 @@ image_resource:
     aws_region: us-gov-west-1
     semver_constraint: ">= 1.0.0"
 
+inputs:
+  - release
+
 run:
   path: "sh"
   args:
