@@ -7,10 +7,11 @@ rm -rf src/src/*
 tar -xzf release/source.tar.gz --directory src/src
 
 # Directory name changes with every release, so make it constant
-ls src/src | xargs --replace=% mv % DefectDojo
+ls src/src | xargs --replace=% mv src/src/% src/src/DefectDojo
 
 # Create a topic branch named after the new version
-git checkout -b defectdojo-$(cat release/version)
+cd src
+git checkout -b defectdojo-$(cat ../release/version)
 
 # bosh add-blob --dir=src release/source.tar.gz defectdojo/source.tar.gz
 exit 1
