@@ -15,7 +15,4 @@ inputs:
   - name: src
 
 run:
-  path: "sh"
-  args:
-    - "-c"
-    - "exit 1"
+  path: src/ci/process-release.sh
