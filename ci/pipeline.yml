@@ -11,6 +11,8 @@ jobs:
 - name: update-blobs
   plan:
     - in_parallel:
+      - get: general-task
+
       - get: release
         params:
           include_source_tarball: true
