@@ -20,6 +20,7 @@ jobs:
       passed: [set-self]
 
     - task: process-release # convert from .tar.gz to whatever bosh wants
+      image: general-task
       file: src/ci/process-release.yml
 
 
@@ -45,6 +46,24 @@ resources:
     commit_verification_keys: ((cloud-gov-pgp-keys))
 
 resource_types:
+- name: registry-image
+  type: registry-image
+  source:
+    aws_access_key_id: ((ecr_aws_key))
+    aws_secret_access_key: ((ecr_aws_secret))
+    repository: registry-image-resource
+    aws_region: us-gov-west-1
+    tag: latest
+
+- name: general-task
+  type: registry-image
+  source:
+    aws_access_key_id: ((ecr_aws_key))
+    aws_secret_access_key: ((ecr_aws_secret))
+    repository: general-task
+    aws_region: us-gov-west-1
+    tag: latest
+
 - name: github-release
   type: registry-image
   source:
