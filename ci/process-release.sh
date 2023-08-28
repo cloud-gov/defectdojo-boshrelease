@@ -11,6 +11,10 @@ ls src/src | xargs --replace=% mv src/src/% src/src/DefectDojo
 
 DEFECTDOJO_VERSION=$(cat ../release/version)
 
+# Token set as GH_TOKEN is automatically used. See `gh help environment`.
+gh auth login
+gh auth setup-git
+
 # Create a topic branch named after the new version
 cd src
 git checkout -b defectdojo-$DEFECTDOJO_VERSION
@@ -21,9 +25,6 @@ git commit -m "Bump Defect Dojo to $DEFECTDOJO_VERSION"
 
 # Push to a new branch
 git push -u origin $(git branch --show-current)
-
-# Token set as GH_TOKEN is automatically used. See `gh help environment`.
-gh auth login
 
 gh pr create \
 	--base main \
