@@ -19,9 +19,12 @@ git checkout -b defectdojo-$DEFECTDOJO_VERSION
 git add src
 git commit -m "Bump Defect Dojo to $DEFECTDOJO_VERSION"
 
-# Push and PR
+# Push to a new branch
 git push -u origin $(git branch --show-current)
+
 # Token set as GH_TOKEN is automatically used. See `gh help environment`.
+gh auth login
+
 gh pr create \
 	--base main \
 	--fill \
