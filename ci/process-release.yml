@@ -12,6 +12,7 @@ image_resource:
 
 inputs:
   - name: release
+  - name: src
 
 run:
   path: "sh"
