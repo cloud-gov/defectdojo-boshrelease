@@ -8,21 +8,21 @@ jobs:
     # var_files:
     #   - src/ci/config.yml
 
-- name: get-blobs
+- name: update-blobs
   plan:
-    - get: release
-      params:
-        include_source_tarball: true
-      # trigger: true. todo: add this once finished.
+    - in_parallel:
+      - get: release
+        params:
+          include_source_tarball: true
+        # trigger: true. todo: add this once finished.
 
-    - get: src
-      trigger: true
-      passed: [set-self]
+      - get: src
+        trigger: true
+        passed: [set-self]
 
-    - task: process-release # convert from .tar.gz to whatever bosh wants
+    - task: process-release
       image: general-task
       file: src/ci/process-release.yml
-
 
     # - put: upload-blob
 
@@ -31,6 +31,15 @@ jobs:
     # - put: create-pull-request
 
 resources:
+- name: general-task
+  type: registry-image
+  source:
+    aws_access_key_id: ((ecr_aws_key))
+    aws_secret_access_key: ((ecr_aws_secret))
+    repository: general-task
+    aws_region: us-gov-west-1
+    tag: latest
+
 - name: release
   type: github-release
   source:
@@ -52,15 +61,6 @@ resource_types:
     aws_access_key_id: ((ecr_aws_key))
     aws_secret_access_key: ((ecr_aws_secret))
     repository: registry-image-resource
-    aws_region: us-gov-west-1
-    tag: latest
-
-- name: general-task
-  type: registry-image
-  source:
-    aws_access_key_id: ((ecr_aws_key))
-    aws_secret_access_key: ((ecr_aws_secret))
-    repository: general-task
     aws_region: us-gov-west-1
     tag: latest
 
