@@ -25,6 +25,8 @@ jobs:
     - task: process-release
       image: general-task
       file: src/ci/process-release.yml
+      params:
+        GH_TOKEN: ((cg-ci-bot-ghtoken))
 
     # - put: upload-blob
 
