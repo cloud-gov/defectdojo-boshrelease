@@ -18,6 +18,8 @@ gh auth login --hostname github.com
 echo "Configuring Git"
 gh auth setup-git --hostname github.com
 
+# With authentication done, print commands
+set +x
 # Create a topic branch named after the new version
 cd src
 git checkout -b defectdojo-$DEFECTDOJO_VERSION
