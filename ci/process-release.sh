@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail
 
 # Start from clean src folder
 rm -rf src/src/*
@@ -9,11 +10,13 @@ tar -xzf release/source.tar.gz --directory src/src
 # Directory name changes with every release, so make it constant
 ls src/src | xargs --replace=% mv src/src/% src/src/DefectDojo
 
-DEFECTDOJO_VERSION=$(cat ../release/version)
+DEFECTDOJO_VERSION=$(cat release/version)
 
 # Token set as GH_TOKEN is automatically used. See `gh help environment`.
-gh auth login
-gh auth setup-git
+echo "Logging into GitHub"
+gh auth login --hostname github.com
+echo "Configuring Git"
+gh auth setup-git --hostname github.com
 
 # Create a topic branch named after the new version
 cd src
