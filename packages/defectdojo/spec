@@ -5,4 +5,4 @@ dependencies:
   - python
 
 files:
-  - 2.25.4.tar.gz
+  - defectdojo/2.25.4.tar.gz
