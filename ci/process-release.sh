@@ -1,11 +1,11 @@
 #!/bin/bash
 set -eo pipefail
 
-# Start from clean src folder
-rm -rf src/src/*
+cd src
+bosh add-blob --dir=src release/source.tar.gz defectdojo/source.tar.gz
 
-# BOSH release source code belongs in src directory
-tar -xzf release/source.tar.gz --directory src/src
+##########################
+
 
 # Directory name changes with every release, so make it constant
 ls src/src | xargs --replace=% mv src/src/% src/src/DefectDojo
@@ -17,6 +17,8 @@ echo "Logging into GitHub"
 gh auth login --hostname github.com
 echo "Configuring Git"
 gh auth setup-git --hostname github.com
+git config --global user.email "cloud-gov-operations@gsa.gov"
+git config --global user.name "cloud.gov CI Bot"
 
 # With authentication done, print commands
 set +x
@@ -29,7 +31,7 @@ git add src
 git commit -m "Bump Defect Dojo to $DEFECTDOJO_VERSION"
 
 # Push to a new branch
-git push -u origin $(git branch --show-current)
+git push --set-upstream origin $(git branch --show-current)
 
 gh pr create \
 	--base main \
