@@ -1,1 +1,6 @@
+---
 name: defectdojo-boshrelease
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/defectdojo-blobs
