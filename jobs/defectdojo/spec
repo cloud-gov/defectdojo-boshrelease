@@ -2,7 +2,7 @@
 name: defectdojo
 
 templates:
-  bin/opensearch: bin/opensearch.sh
+  bin/defectdojo: bin/defectdojo.sh
 
 packages:
   - defectdojo
