@@ -16,7 +16,9 @@ instance_groups:
 - name: defectdojo
   azs: [z1, z2]
   instances: 1
-  jobs: []
+  jobs:
+    - name: defectdojo
+      release: defectdojo
   vm_type: t3.medium
   stemcell: default
   persistent_disk: 10240
