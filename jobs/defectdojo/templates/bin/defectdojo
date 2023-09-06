@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/var/vcap/packages/defectdojo/entrypoint-uwsgi.sh

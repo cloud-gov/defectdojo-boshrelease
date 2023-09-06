@@ -1,5 +1,5 @@
 ---
-name: defectdojo-boshrelease
+name: defectdojo
 blobstore:
   provider: local
   options:

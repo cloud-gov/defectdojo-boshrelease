@@ -1,0 +1,11 @@
+---
+name: defectdojo
+
+templates:
+  bin/opensearch: bin/opensearch.sh
+
+packages:
+  - defectdojo
+  - python
+
+properties: {}

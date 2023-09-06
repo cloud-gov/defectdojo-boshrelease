@@ -2,3 +2,4 @@ set -e
 
 # blob source: https://github.com/DefectDojo/django-DefectDojo/archive/refs/tags/2.25.4.tar.gz
 tar -xzf 2.25.4.tar.gz -C $BOSH_INSTALL_TARGET # result: django-DefectDojo-2.25.4
+# pip install -r requirements.txt
