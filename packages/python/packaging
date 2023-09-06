@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail
 
 apt-get -y update && \
 apt-get -y install --no-install-recommends \
