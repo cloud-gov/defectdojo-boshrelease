@@ -7,6 +7,9 @@ stemcells:
 releases:
   - name: defectdojo
     version: latest
+  - name: bpm
+    version: latest
+
 update:
   canaries: 2
   max_in_flight: 1
