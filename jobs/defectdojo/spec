@@ -3,6 +3,7 @@ name: defectdojo
 
 templates:
   bin/defectdojo: bin/defectdojo.sh
+  config/local_settings.py: /var/vcap/jobs/defectdojo/packages/defectdojo/django-DefectDojo-2.25.4/dojo/settings/local_settings.py
 
 packages:
   - defectdojo
