@@ -1,6 +1,7 @@
 ---
-name: defectdojo
 blobstore:
-  provider: local
+  provider: s3
   options:
-    blobstore_path: /tmp/defectdojo-blobs
+    bucket_name: cloud-gov-release-blobstore
+    region: us-gov-west-1
+final_name: defectdojo
