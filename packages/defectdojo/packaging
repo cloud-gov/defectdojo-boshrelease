@@ -5,5 +5,5 @@ set -eo pipefail
 mkdir -p source
 tar -xzf defectdojo/2.25.4.tar.gz -C source # result: source/django-DefectDojo-2.25.4
 ls source | xargs -I% cp -r source/%/. $BOSH_INSTALL_TARGET
-
-# pip install -r requirements.txt
+cd $BOSH_INSTALL_TARGET
+pip install -r requirements.txt
