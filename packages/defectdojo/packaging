@@ -2,7 +2,8 @@
 set -eo pipefail
 
 # blob source: https://github.com/DefectDojo/django-DefectDojo/archive/refs/tags/2.25.4.tar.gz
-tar -xzf defectdojo/2.25.4.tar.gz -C defectdojo/source # result: defectdojo/source/django-DefectDojo-2.25.4
-ls defectdojo/source | xargs -I% cp -r defectdojo/source/%/. $BOSH_INSTALL_TARGET
+mkdir -p source
+tar -xzf defectdojo/2.25.4.tar.gz -C source # result: source/django-DefectDojo-2.25.4
+ls source | xargs -I% cp -r source/%/. $BOSH_INSTALL_TARGET
 
 # pip install -r requirements.txt
