@@ -1,3 +1,6 @@
+#!/bin/bash
+set -eo pipefail
+
 git pull
 bosh create-release --force
 bosh upload-release
