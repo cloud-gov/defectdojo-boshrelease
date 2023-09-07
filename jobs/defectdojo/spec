@@ -3,6 +3,7 @@ name: defectdojo
 
 templates:
   bin/defectdojo: bin/defectdojo.sh
+  config/bpm.yml.erb: config/bpm.yml
   config/local_settings.py: packages/defectdojo/dojo/settings/local_settings.py
 
 packages:
