@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eo pipefail
 
+# See the upstream Dockerfile for the source of these packaging steps:
+# https://github.com/DefectDojo/django-DefectDojo/blob/master/Dockerfile.django-debian
+
 # blob source: https://github.com/DefectDojo/django-DefectDojo/archive/refs/tags/2.25.4.tar.gz
 mkdir -p source
 tar -xzf defectdojo/2.25.4.tar.gz -C source # result: source/django-DefectDojo-2.25.4
@@ -22,5 +25,11 @@ apt-get -y install --no-install-recommends python3-pip \
   uuid-runtime \
   libcurl4-openssl-dev
 
+CPUCOUNT=1 pip3 wheel --wheel-dir=/tmp/wheels -r ./requirements.txt
+
 pip3 --version
-pip3 install -r requirements.txt "--prefix=${BOSH_INSTALL_TARGET}"
+pip3 install --no-cache-dir \
+  --no-index \
+  --find-links=/tmp/wheels \
+  --prefix=${BOSH_INSTALL_TARGET} \
+  -r requirements.txt
