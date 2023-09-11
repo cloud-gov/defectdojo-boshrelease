@@ -7,5 +7,7 @@ tar -xzf defectdojo/2.25.4.tar.gz -C source # result: source/django-DefectDojo-2
 ls source | xargs -I% cp -r source/%/. $BOSH_INSTALL_TARGET
 cd $BOSH_INSTALL_TARGET
 
-python3 -m ensurepip --upgrade
+python3 --version
+apt-get -y update
+apt-get -y install --no-install-recommends python3-pip
 pip3 install -r requirements.txt "--prefix=${BOSH_INSTALL_TARGET}"
