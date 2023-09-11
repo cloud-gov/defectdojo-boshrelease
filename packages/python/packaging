@@ -2,20 +2,22 @@
 set -eo pipefail
 
 apt-get -y update
-apt-get -y install --no-install-recommends \
-  gcc \
-  build-essential \
-  dnsutils \
-  default-mysql-client \
-  libmariadb-dev-compat \
-  libpq-dev \
-  postgresql-client \
-  xmlsec1 \
-  git \
-  uuid-runtime \
+# apt-get -y install --no-install-recommends \
+#   gcc \
+#   build-essential \
+#   dnsutils \
+#   default-mysql-client \
+#   libmariadb-dev-compat \
+#   libpq-dev \
+#   postgresql-client \
+#   xmlsec1 \
+#   git \
+#   uuid-runtime \
+#   libcurl4-openssl-dev \
+#   python3.11
+
   # libcurl4-openssl-dev is required for installing pycurl python package
-  libcurl4-openssl-dev \
-  python3.11
+
 
 apt-get clean
 rm -rf /var/lib/apt/lists # save 100+ MB
