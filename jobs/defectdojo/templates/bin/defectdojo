@@ -1,4 +1,3 @@
 #!/bin/bash
 
-export PYTHONPATH=/var/vcap/packages/defectdojo/lib/python3.7/site-packages/
 /var/vcap/packages/defectdojo/docker/entrypoint-uwsgi.sh

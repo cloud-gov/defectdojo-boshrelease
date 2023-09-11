@@ -1,8 +1,7 @@
 ---
 name: defectdojo
 
-dependencies:
-  - python3
+dependencies: []
 
 files:
   - defectdojo/2.25.4.tar.gz
