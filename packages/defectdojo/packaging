@@ -10,7 +10,17 @@ cd $BOSH_INSTALL_TARGET
 python3 --version
 apt-get -y update
 apt-get -y install --no-install-recommends python3-pip \
-	git
+  gcc \
+  build-essential \
+  dnsutils \
+  default-mysql-client \
+  libmariadb-dev-compat \
+  libpq-dev \
+  postgresql-client \
+  xmlsec1 \
+  git \
+  uuid-runtime \
+  libcurl4-openssl-dev
 
 pip3 --version
 pip3 install -r requirements.txt "--prefix=${BOSH_INSTALL_TARGET}"
