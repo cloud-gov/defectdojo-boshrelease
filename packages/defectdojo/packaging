@@ -23,7 +23,8 @@ apt-get -y install --no-install-recommends python3-pip \
   xmlsec1 \
   git \
   uuid-runtime \
-  libcurl4-openssl-dev
+  libcurl4-openssl-dev \
+  libpython3.10-dev
 
 CPUCOUNT=1 pip3 wheel --wheel-dir=/tmp/wheels -r ./requirements.txt
 
