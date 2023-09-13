@@ -1,3 +1,6 @@
 #!/bin/bash
 
-/var/vcap/packages/defectdojo/docker/entrypoint-uwsgi.sh
+export PYTHONPATH="$PYTHONPATH:/var/vcap/jobs/defectdojo/packages/defectdojo/local/lib/python3.10"
+
+cd /var/vcap/jobs/defectdojo/packages/defectdojo
+python3 manage.py runserver 0.0.0.0:8000
