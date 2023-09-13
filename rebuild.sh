@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 
+source ../.env
 git pull
 bosh create-release --force
 bosh upload-release
