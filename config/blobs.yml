@@ -6,3 +6,19 @@ python/Python-3.11.6.tar.xz:
   size: 20067204
   object_id: 6ddc0817-51a3-455e-4a97-35d8bcc35943
   sha: sha256:0fab78fa7f133f4f38210c6260d90d7c0d5c7198446419ce057ec7ac2e6f5f38
+python/pip-23.2.1-py3-none-any.whl:
+  size: 2086091
+  object_id: 8e546fa0-62c7-400d-76b6-7abf3210e885
+  sha: sha256:7ccf472345f20d35bdc9d1841ff5f313260c2c33fe417f48c30ac46cccabf5be
+python/setuptools-68.2.2-py3-none-any.whl:
+  size: 807864
+  object_id: 45a5b07e-7d1a-42ad-66d1-257c89ebe815
+  sha: sha256:b454a35605876da60632df1a60f736524eb73cc47bbc9f3f1ef1b644de74fd2a
+python/virtualenv-20.24.5-py3-none-any.whl:
+  size: 3747494
+  object_id: 1109778f-b1e1-4ce5-50f9-face80dae35f
+  sha: sha256:b80039f280f4919c77b30f1c23294ae357c4c8701042086e3fc005963e4e537b
+python/wheel-0.41.2-py3-none-any.whl:
+  size: 64848
+  object_id: 8b0684f9-d1b9-447d-65a4-d30d8768f0e2
+  sha: sha256:75909db2664838d015e3d9139004ee16711748a52c8f336b52882266540215d8

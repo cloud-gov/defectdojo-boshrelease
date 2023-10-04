@@ -3,3 +3,8 @@ name: python
 dependencies: []
 files:
 - python/Python-3.11.*.tar.xz
+
+- python/wheel-*-py3-none-any.whl
+- python/pip-*-py3-none-any.whl
+- python/setuptools-*-py3-none-any.whl
+- python/virtualenv-*-py3-none-any.whl

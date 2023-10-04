@@ -17,3 +17,8 @@ pushd Python*
   make -j $CPUS
   make install
 popd
+
+pip install --upgrade python/wheel-*-py3-none-any.whl
+pip install --upgrade python/pip-*-py3-none-any.whl
+pip install --upgrade python/setuptools-*-py3-none-any.whl
+pip install --upgrade python/virtualenv-*-py3-none-any.whl
