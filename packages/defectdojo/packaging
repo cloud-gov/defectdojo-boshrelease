@@ -28,7 +28,6 @@ apt-get -y install --no-install-recommends \
   git \
   uuid-runtime \
   libcurl4-openssl-dev \
-  libffi-dev \
 
 CPUCOUNT=1 pip3 wheel --wheel-dir=/tmp/wheels -r ./requirements.txt
 
