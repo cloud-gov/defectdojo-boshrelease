@@ -25,7 +25,7 @@ export PKG_CONFIG_PATH=${BOSH_INSTALL_TARGET}/libffi/lib/pkgconfig
 
 tar xf python/Python-*.tar.xz
 pushd Python*
-  ./configure --prefix=$BOSH_INSTALL_TARGET --with-system-ffi --ensure-pip
+  ./configure --prefix=$BOSH_INSTALL_TARGET --with-system-ffi --with-ensurepip
   make -j $CPUS
   make install
 popd
