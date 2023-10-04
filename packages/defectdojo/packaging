@@ -41,6 +41,4 @@ pip3 install --no-cache-dir \
   --prefix=${BOSH_INSTALL_TARGET} \
   -r requirements.txt
 
-virtualenv --relocatable venv
 deactivate
-sed -i 's/^\(VIRTUAL_ENV\)=.\+$/\1="\/var\/vcap\/packages\/defectdojo\/venv"/g' venv/bin/activate
