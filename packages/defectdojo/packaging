@@ -29,6 +29,9 @@ apt-get -y install --no-install-recommends \
   uuid-runtime \
   libcurl4-openssl-dev \
 
+virtualenv --always-copy venv
+. venv/bin/activate
+
 CPUCOUNT=1 pip3 wheel --wheel-dir=/tmp/wheels -r ./requirements.txt
 
 pip3 --version
@@ -37,3 +40,7 @@ pip3 install --no-cache-dir \
   --find-links=/tmp/wheels \
   --prefix=${BOSH_INSTALL_TARGET} \
   -r requirements.txt
+
+virtualenv --relocatable venv
+deactivate
+sed -i 's/^\(VIRTUAL_ENV\)=.\+$/\1="\/var\/vcap\/packages\/simpleflaskapp\/venv"/g' venv/bin/activate
