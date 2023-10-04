@@ -43,4 +43,4 @@ pip3 install --no-cache-dir \
 
 virtualenv --relocatable venv
 deactivate
-sed -i 's/^\(VIRTUAL_ENV\)=.\+$/\1="\/var\/vcap\/packages\/simpleflaskapp\/venv"/g' venv/bin/activate
+sed -i 's/^\(VIRTUAL_ENV\)=.\+$/\1="\/var\/vcap\/packages\/defectdojo\/venv"/g' venv/bin/activate
