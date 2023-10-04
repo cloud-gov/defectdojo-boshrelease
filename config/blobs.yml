@@ -2,6 +2,10 @@ defectdojo/2.25.4.tar.gz:
   size: 32607932
   object_id: c538420a-53b9-4763-7de3-5218057159f3
   sha: sha256:a239695ec6e241e439eae6343b39476588c39db5fd6e57b93e10c9e749c6c968
+libffi-3.4.4.tar.gz:
+  size: 1362394
+  object_id: 198829d0-4441-47c6-4ef6-cd195b11e9a0
+  sha: sha256:d66c56ad259a82cf2a9dfc408b32bf5da52371500b84745f7fb8b645712df676
 python/Python-3.11.6.tar.xz:
   size: 20067204
   object_id: 6ddc0817-51a3-455e-4a97-35d8bcc35943

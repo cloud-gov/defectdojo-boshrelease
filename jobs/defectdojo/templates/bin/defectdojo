@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH=/var/vcap/packages/python/bin:$PATH
+
 . venv/bin/activate
 
 cd /var/vcap/jobs/defectdojo/packages/defectdojo
