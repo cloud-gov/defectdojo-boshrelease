@@ -2,3 +2,7 @@ defectdojo/2.25.4.tar.gz:
   size: 32607932
   object_id: c538420a-53b9-4763-7de3-5218057159f3
   sha: sha256:a239695ec6e241e439eae6343b39476588c39db5fd6e57b93e10c9e749c6c968
+python/Python-3.11.6.tar.xz:
+  size: 20067204
+  object_id: 6ddc0817-51a3-455e-4a97-35d8bcc35943
+  sha: sha256:0fab78fa7f133f4f38210c6260d90d7c0d5c7198446419ce057ec7ac2e6f5f38

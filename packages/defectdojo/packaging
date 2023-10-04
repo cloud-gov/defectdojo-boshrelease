@@ -12,7 +12,7 @@ cd $BOSH_INSTALL_TARGET
 
 python3 --version
 apt-get -y update
-apt-get -y install --no-install-recommends python3-pip \
+apt-get -y install --no-install-recommends \
   gcc \
   build-essential \
   dnsutils \
@@ -24,7 +24,6 @@ apt-get -y install --no-install-recommends python3-pip \
   git \
   uuid-runtime \
   libcurl4-openssl-dev \
-  libpython3.10-dev
 
 CPUCOUNT=1 pip3 wheel --wheel-dir=/tmp/wheels -r ./requirements.txt
 
