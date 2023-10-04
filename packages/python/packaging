@@ -6,10 +6,6 @@ CPUS=$(grep -c ^processor /proc/cpuinfo)
 
 export HOME=/var/vcap
 
-apt-get -y update
-apt-get -y install --no-install-recommends \
-  libffi-dev \
-
 tar xf python/Python-*.tar.xz
 pushd Python*
   ./configure \
