@@ -9,6 +9,7 @@ export HOME=/var/vcap
 apt-get -y update
 apt-get -y install --no-install-recommends \
   libffi-dev \
+  libpython3.11-dev \
 
 tar xf python/Python-*.tar.xz
 pushd Python*
