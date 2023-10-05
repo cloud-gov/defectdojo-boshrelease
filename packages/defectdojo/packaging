@@ -32,7 +32,6 @@ apt-get -y install --no-install-recommends \
 virtualenv --always-copy venv
 . venv/bin/activate
 
-mkdir /var/vcap/packages/defectdojo/tmp
 CPUCOUNT=1 pip3 wheel --wheel-dir=/tmp/wheel -r ./requirements.txt
 
 pip3 --version
