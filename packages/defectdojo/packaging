@@ -32,9 +32,12 @@ apt-get -y install --no-install-recommends \
 virtualenv --always-copy venv
 . venv/bin/activate
 
-CPUCOUNT=1 pip3 wheel -r ./requirements.txt
+CPUCOUNT=1 pip3 wheel --wheel-dir=/var/vcap/packages/tmp/wheels -r ./requirements.txt
 
 pip3 --version
-pip3 install -r requirements.txt
+pip3 install --no-cache-dir \
+  --no-index \
+  --find-links=/var/vcap/packages/tmp/wheels \
+  -r requirements.txt
 
 deactivate
