@@ -9,4 +9,3 @@ export PATH=/var/vcap/packages/python/bin:$PATH
 . venv/bin/activate
 
 cd /var/vcap/jobs/defectdojo/packages/defectdojo
-python3 manage.py runserver 0.0.0.0:8000
