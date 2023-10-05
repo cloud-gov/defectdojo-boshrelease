@@ -33,12 +33,10 @@ virtualenv --always-copy venv
 . venv/bin/activate
 
 mkdir /var/vcap/packages/defectdojo/tmp
-CPUCOUNT=1 pip3 wheel --wheel-dir=/var/vcap/packages/defectdojo/tmp -r ./requirements.txt
+CPUCOUNT=1 pip3 wheel -r ./requirements.txt
 
 pip3 --version
-pip3 install --no-cache-dir \
-  --no-index \
-  --find-links=/var/vcap/packages/defectdojo/tmp \
-  -r requirements.txt
+pip3 install -r requirements.txt
 
 deactivate
+sed -i 's/^\(VIRTUAL_ENV\)=.\+$/\1="\/var\/vcap\/packages\/defectdojo\/venv"/g' venv/bin/activate
