@@ -1,11 +1,9 @@
 #!/bin/bash
 
-echo $PWD
+cd /var/vcap/jobs/defectdojo/packages/defectdojo
 
 export LD_LIBRARY_PATH=/var/vcap/packages/python/lib:$LD_LIBRARY_PATH
 export C_INCLUDE_PATH=/var/vcap/packages/python/include:$C_INCLUDE_PATH
 export PATH=/var/vcap/packages/python/bin:$PATH
 
 . venv/bin/activate
-
-cd /var/vcap/jobs/defectdojo/packages/defectdojo
