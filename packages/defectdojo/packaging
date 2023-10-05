@@ -35,9 +35,6 @@ virtualenv --always-copy venv
 CPUCOUNT=1 pip3 wheel --wheel-dir=/tmp/wheels -r ./requirements.txt
 
 pip3 --version
-pip3 install --no-cache-dir \
-  --no-index \
-  --find-links=/tmp/wheels \
-  -r requirements.txt
+pip3 install -r requirements.txt
 
 deactivate
