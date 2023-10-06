@@ -1,0 +1,6 @@
+---
+name: nginx_prometheus
+
+files:
+  - nginx/nginx-1.24.0.tar.gz
+  - nginx/pcre2-10.42.tar.gz
