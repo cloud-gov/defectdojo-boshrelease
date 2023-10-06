@@ -1,5 +1,5 @@
 ---
-name: nginx_prometheus
+name: nginx
 
 files:
   - nginx/nginx-1.24.0.tar.gz
