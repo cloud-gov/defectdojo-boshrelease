@@ -1,0 +1,5 @@
+---
+name: nodejs
+
+files:
+  - nodejs/node-v18.18.0.tar.gz

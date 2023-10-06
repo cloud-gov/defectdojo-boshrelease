@@ -14,6 +14,10 @@ nginx/pcre2-10.42.tar.gz:
   size: 2397194
   object_id: 8ec5e059-3dfb-4306-6254-e1ba92fa2d5e
   sha: sha256:c33b418e3b936ee3153de2c61cc638e7e4fe3156022a5c77d0711bcbb9d64f1f
+nodejs/node-v18.18.0.tar.gz:
+  size: 86087804
+  object_id: 7b8e88a7-4c38-4287-79f5-4a311101dc68
+  sha: sha256:5c5f4d7ee0b65f6e31788570d939a688ac7c9e47b007f14592e899b51cdca47c
 python/Python-3.11.6.tar.xz:
   size: 20067204
   object_id: 6ddc0817-51a3-455e-4a97-35d8bcc35943
