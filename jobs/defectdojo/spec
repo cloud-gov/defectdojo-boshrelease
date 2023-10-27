@@ -8,6 +8,8 @@ templates:
 
 packages:
   - python
+  - nginx
+  - node
   - defectdojo
 
 properties: {}
