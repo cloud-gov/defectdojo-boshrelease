@@ -9,7 +9,7 @@ templates:
 packages:
   - python
   - nginx
-  - node
+  - nodejs
   - defectdojo
 
 properties: {}
