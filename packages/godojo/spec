@@ -5,3 +5,4 @@ dependencies: []
 
 files:
   - godojo/godojo-v1.2.1_standard.zip
+  - godojo/dojoConfig.yml
