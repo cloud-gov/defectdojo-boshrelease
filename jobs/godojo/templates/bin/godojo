@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cp ${BOSH_INSTALL_TARGET}/* .
+cd /var/vcap/jobs/godojo
+
+cp /var/vcap/packages/godojo/* .
 
 mkdir logs
 
