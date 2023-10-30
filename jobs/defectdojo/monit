@@ -3,9 +3,3 @@ check process defectdojo
   start program "/var/vcap/jobs/bpm/bin/bpm start defectdojo"
   stop program "/var/vcap/jobs/bpm/bin/bpm stop defectdojo"
   group vcap
-
-check device os-ephemeral_disk with path /var/vcap/data
-  if SPACE usage > 80% then alert
-
-check device os-persistent_disk with path /var/vcap/store
-  if SPACE usage > 80% then alert
