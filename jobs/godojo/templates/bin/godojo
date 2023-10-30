@@ -1,9 +1,3 @@
 #!/bin/bash
 
-cd /var/vcap/jobs/godojo
-
-cp /var/vcap/packages/godojo/* .
-
-mkdir logs
-
-./godojo
+echo "Test"
