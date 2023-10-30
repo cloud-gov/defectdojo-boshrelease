@@ -2,6 +2,7 @@
 name: godojo
 
 templates:
+  bin/godojo: bin/godojo.sh
   config/bpm.yml.erb: config/bpm.yml
 
 packages:
