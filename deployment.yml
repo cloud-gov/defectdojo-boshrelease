@@ -24,6 +24,8 @@ instance_groups:
       release: defectdojo
     - name: bpm
       release: bpm
+    - name: godojo
+      release: defectdojo
   vm_type: t3.medium
   stemcell: default
   persistent_disk: 10240
