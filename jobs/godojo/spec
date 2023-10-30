@@ -1,0 +1,9 @@
+---
+name: godojo
+
+templates:
+
+packages:
+  - godojo
+
+properties: {}
