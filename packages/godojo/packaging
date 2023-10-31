@@ -2,17 +2,15 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
+cd ${BOSH_INSTALL_TARGET}
+
 apt-get -y update
 apt-get -y install --no-install-recommends \
   unzip \
-  curl \
-  build-essential
 
 unzip godojo/godojo-v1.2.1_standard.zip
 
 cp standard/godojo ${BOSH_INSTALL_TARGET}/godojo
-cp godojo/dojoConfig.yml ${BOSH_INSTALL_TARGET}/dojoConfig.yml
 
-cd ${BOSH_INSTALL_TARGET}
-
+#run install with default config. Real config will be done in job
 ./godojo
