@@ -6,7 +6,9 @@ apt-get -y update
 apt-get -y install --no-install-recommends \
   unzip \
   curl \
-  build-essential
+  build-essential \
+  mysql-server \
+  libmysqlclient-dev
 
 unzip godojo/godojo-v1.2.1_standard.zip
 
