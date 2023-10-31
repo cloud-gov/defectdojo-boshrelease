@@ -8,9 +8,9 @@ apt-get -y install --no-install-recommends \
 
 unzip godojo/godojo-v1.2.1_standard.zip
 
-pushd godojo-v1.2.1_standard
+pushd standard
 
-cp standard/godojo ${BOSH_INSTALL_TARGET}/godojo/godojo
+cp godojo ${BOSH_INSTALL_TARGET}/godojo/godojo
 
 cd ${BOSH_INSTALL_TARGET}/godojo
 #run to generate default config
