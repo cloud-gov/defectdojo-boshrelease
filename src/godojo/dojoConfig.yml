@@ -150,3 +150,12 @@ Settings:
   UwsgiPort: "" # DD_UWSGI_PORT - Port for uwsgi
   Whitenoise: false # DD_WHITENOISE - Boolean to have whtienoise serve static files for DefectDojo
   Wkhtmltopdf: "/usr/local/bin/wkhtmltopdf" # DD_WKHTMLTOPDF - DEPRECATED
+
+# These are optional config values that generally never need to be changed and are used while testing godojo
+# rather then actual installs
+Options:
+  HelpURL: "https://github.com/mtesauro/godojo" # DD_
+  ReleaseURL: "https://github.com/DefectDojo/django-DefectDojo/archive/" # DD_
+  CloneURL: "https://github.com/DefectDojo/django-DefectDojo.git" # DD_
+  YarnGPG: "https://dl.yarnpkg.com/debian/pubkey.gpg" # DD_
+  YarnRepo: "deb https://dl.yarnpkg.com/debian/ stable main" # DD_
