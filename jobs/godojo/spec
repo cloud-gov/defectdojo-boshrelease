@@ -4,8 +4,43 @@ name: godojo
 templates:
   bin/godojo: bin/godojo.sh
   config/bpm.yml.erb: config/bpm.yml
+  bin/dojoConfig.yml.erb: bin/dojoConfig.yml
 
 packages:
   - godojo
 
-properties: {}
+properties:
+  dojo.DD_DB_Ruser:
+    description: |
+      Superuser for the database
+  dojo.DD_DB_Rpass:
+    description: |
+      Password for the database superuser
+  dojo.DD_DB_User:
+    description: |
+      Username of the database user that DefectDojo will use
+  dojo.DD_DB_Pass:
+    description: |
+      Password for the database user DefectDojo will use
+  dojo.DD_OS_User:
+    description: |
+      OS user to own the DefectDojo instll and files
+  dojo.DD_OS_Pass:
+    description: |
+      Password for the OS user for DefectDojo
+  dojo.DD_OS_Group:
+    description: |
+      OS Group to own the DefectDojo install and files
+  dojo.DD_OS_UID:
+    description: |
+      User ID for the DefectDojo OS user
+  dojo.DD_OS_GID:
+    description: |
+      Group ID for the DefectDojo OS group
+  dojo.DD_ADMIN_User:
+    description: |
+      Admin user for the DefectDojo web app
+  dojo.DD_ADMIN_Pass:
+    description: |
+      Password for the DefectDojo web app admin user
+
