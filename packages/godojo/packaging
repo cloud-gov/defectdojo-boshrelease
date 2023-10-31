@@ -4,7 +4,8 @@ set -u # report the usage of uninitialized variables
 
 apt-get -y update
 apt-get -y install --no-install-recommends \
-  unzip
+  unzip \
+  curl
 
 unzip godojo/godojo-v1.2.1_standard.zip
 
