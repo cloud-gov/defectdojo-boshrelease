@@ -11,6 +11,9 @@ packages:
   - godojo
 
 properties:
+  dojo.DD_Version:
+    description: |
+      Release version of DefectDojo from Github Releases
   dojo.DD_DB_Engine:
     description: |
       Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
