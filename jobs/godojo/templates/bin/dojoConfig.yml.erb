@@ -14,7 +14,7 @@
 # SecretKey
 
 Install:
-  Version: "2.4.1" # DD_Version - Release version of DefectDojo from Github Releases
+  Version: <%= p('dojo.DD_Version') %> # DD_Version - Release version of DefectDojo from Github Releases
   SourceInstall: false # DD_SourceInstall - Boolean if a source install is desired (vs a release)
   # If ^ is true, a souce code install will occur overriding the release version provided
   SourceBranch: "dev" # DD_SourceBranch - The branch's HEAD to be checked out if SourceInstall is true
@@ -34,7 +34,7 @@ Install:
   Sampledata: false # DD_Sampledata - Boolean for installing sample data during the install
   PullSource: true # DD_PullSource - Boolean for installer to download source for DefectDojo Note: Usually for debugging the installer itself
   DB:
-    Engine: "PostgreSQL" # DD_DB_Engine - Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
+    Engine: <%= p('dojo.DD_DB_Engine') %> # DD_DB_Engine - Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
     Local: true # DD_DB_Local - Boolean for when DB is on the same host/server/vm (local)
     Exists: false # DD_DB_Exists - Boolean for when DB for DefectDojo already exists so no install needed
     Ruser: <%= p('dojo.DD_DB_Ruser') %> # DD_DB_Ruser - Superuser for the database Note: this and Rpass below REQUIRED for remote and existing DBs
@@ -43,7 +43,7 @@ Install:
     User: <%= p('dojo.DD_DB_User') %> # DD_DB_User - Username of the database user that DefectDojo will use
     Pass: <%= p('dojo.DD_DB_Pass') %> # DD_DB_Pass - Password for the database user DefectDojo will use Note: set to 24 random characters
     Host: "localhost" # DD_DB_Host - Database hostname
-    Port: 3306 # DD_DB_Port - Port the database is listening on
+    Port: <%= p('dojo.DD_DB_Port') %> # DD_DB_Port - Port the database is listening on
     Drop: false # DD_DB_Drop - Boolean to tell the installer to drop an existing DB if found
   OS:
     User: <%= p('dojo.DD_OS_User') %> # DD_OS_User - OS user to own the DefectDojo instll and files

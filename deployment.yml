@@ -28,10 +28,13 @@ instance_groups:
       release: defectdojo
       properties:
         dojo:
+            DD_Version: ((dojo_version))
+            DD_DB_Engine: ((dojo_db_engine))
             DD_DB_Ruser: ((dojo_db_ruser))
             DD_DB_Rpass: ((dojo_db_rpass))
             DD_DB_User: ((dojo_db_user))
             DD_DB_Pass: ((dojo_db_pass))
+            DD_DB_Port: ((dojo_db_port))
             DD_OS_User: ((dojo_os_user))
             DD_OS_Pass: ((dojo_os_pass))
             DD_OS_Group: ((dojo_os_group))

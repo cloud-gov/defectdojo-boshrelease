@@ -11,6 +11,9 @@ packages:
   - godojo
 
 properties:
+  dojo.DD_DB_Engine:
+    description: |
+      Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
   dojo.DD_DB_Ruser:
     description: |
       Superuser for the database
@@ -23,6 +26,9 @@ properties:
   dojo.DD_DB_Pass:
     description: |
       Password for the database user DefectDojo will use
+  dojo.DD_DB_Port:
+    description: |
+      Port the database is listening on
   dojo.DD_OS_User:
     description: |
       OS user to own the DefectDojo instll and files
