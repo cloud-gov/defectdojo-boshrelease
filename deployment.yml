@@ -20,8 +20,6 @@ instance_groups:
   azs: [z1, z2]
   instances: 1
   jobs:
-    - name: defectdojo
-      release: defectdojo
     - name: bpm
       release: bpm
     - name: godojo
