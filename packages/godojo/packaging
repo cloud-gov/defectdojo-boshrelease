@@ -12,7 +12,4 @@ pushd standard
 
 cp godojo ${BOSH_INSTALL_TARGET}/godojo
 
-cd ${BOSH_INSTALL_TARGET}
-#run to generate default config
-./godojo
 popd
