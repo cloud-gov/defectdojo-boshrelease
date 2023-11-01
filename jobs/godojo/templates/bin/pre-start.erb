@@ -6,4 +6,4 @@ set -u # report the usage of uninitialized variables
 cd /var/vcap/jobs/godojo/bin
 /var/vcap/jobs/godojo/packages/godojo/godojo
 
-apt-get install screen
+DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends screen
