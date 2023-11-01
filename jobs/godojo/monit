@@ -1,7 +1,7 @@
 check process godojo
   with pidfile /var/vcap/sys/run/bpm/godojo/godojo.pid
-  start program "/var/vcap/jobs/bpm/bin/bpm start godojo_ctl"
-  stop program "/var/vcap/jobs/bpm/bin/bpm stop godojo_ctl"
+  start program "/var/vcap/jobs/bpm/bin/bpm start godojo"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop godojo"
   group vcap
 
 check device os-ephemeral_disk with path /var/vcap/data
