@@ -12,6 +12,6 @@ screen -S worker -D -m /bin/bash -c 'source /var/vcap/jobs/godojo/bin/activate &
 screen -S beat -D -m /bin/bash -c 'source /var/vcap/jobs/godojo/bin/activate && C_FORCE_ROOT="true" celery --app dojo beat -l info' &
 
 # Startup DefectDojo with 'runserver' on port 8080
-screen -S dojo -D -m /bin/bash -c 'source /var/vcap/jobs/godojo/bin/activate && python manage.py runserver 0.0.0.0:8080' &
+source /var/vcap/jobs/godojo/bin/activate && python manage.py runserver 0.0.0.0:8080'
 
 echo "DefectDojo should now be available on port 8080 e.g. http://127.0.0.1:8080 or http://[your IP or hostname]:8080"
