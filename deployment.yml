@@ -30,11 +30,11 @@ instance_groups:
           deployment: cf-development
           from: nats-tls
       properties:
-      route_registrar:
-        routes:
-        - name: dojo-dashboard
-          uris:
-          - dojo-beta.dev.us-gov-west-1.aws-us-gov.cloud.gov
+        route_registrar:
+          routes:
+          - name: dojo-dashboard
+            uris:
+            - dojo-beta.dev.us-gov-west-1.aws-us-gov.cloud.gov
       release: routing
     - name: bosh-dns-aliases
       properties:
