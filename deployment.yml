@@ -33,6 +33,7 @@ instance_groups:
         route_registrar:
           routes:
           - name: dojo-dashboard
+            port: 8080
             uris:
             - dojo-beta.dev.us-gov-west-1.aws-us-gov.cloud.gov
       release: routing
