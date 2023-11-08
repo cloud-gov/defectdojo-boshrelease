@@ -34,6 +34,8 @@ instance_groups:
           routes:
           - name: dojo-dashboard
             port: 8080
+            registration_interval: 2s
+            timeout: 1s
             uris:
             - dojo-beta.dev.us-gov-west-1.aws-us-gov.cloud.gov
       release: routing
