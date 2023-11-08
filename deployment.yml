@@ -33,7 +33,8 @@ instance_groups:
         route_registrar:
           routes:
           - name: dojo-dashboard
-            uris: [dojo-beta.dev.us-gov-west-1.aws-us-gov.cloud.gov]
+            uris:
+            - dojo-beta.dev.us-gov-west-1.aws-us-gov.cloud.gov
       release: routing
     - name: bosh-dns-aliases
       properties:
