@@ -29,7 +29,7 @@ Install:
   Source: "django-DefectDojo" # DD_Source - Directory in DD_Root for DefectDojo source code
   Files: "django-DefectDojo" # DD_Files - Directory in DD_Root for local files (static assets, uploads, etc)
   Media: "media" # DD_Media - Directory in DD_Files for uploaded files (screenshots, test artifacts, etc)
-  Static: "django-DefectDojo/static" # DD_Static - Directory in DD_Files for static asset files (JS, images, etc)
+  Static: "static" # DD_Static - Directory in DD_Files for static asset files (JS, images, etc)
   App: "dojo" # DD_App - Directory in DD_Source where the DefectDojo Django app is located
   Sampledata: false # DD_Sampledata - Boolean for installing sample data during the install
   PullSource: true # DD_PullSource - Boolean for installer to download source for DefectDojo Note: Usually for debugging the installer itself
@@ -131,7 +131,7 @@ Settings:
   SocialAuthOktaOauth2Enabled: "" # DD_SOCIAL_AUTH_OKTA_OAUTH2_ENABLED - Boolean to enable Okta login
   SocialAuthOktaOauth2Key: "" # DD_SOCIAL_AUTH_OKTA_OAUTH2_KEY - Okta OAuth2 key
   SocialAuthOktaOauth2Secret: "" # DD_SOCIAL_AUTH_OKTA_OAUTH2_SECRET - Okta OAuth2 secret
-  StaticRoot: "" # DD_STATIC_ROOT - DD_Root + DD_Files + DD_Static
+  StaticRoot: "/var/vcap/jobs/godojo/django-DefectDojo" # DD_STATIC_ROOT - DD_Root + DD_Files + DD_Static
   StaticURL: "/static/" # DD_STATIC_URL - URI path for static files for DefectDojo
   TeamName: "Security Team" # DD_TEAM_NAME - Name for the security team
   TestDatabaseName: "test_defectdojo" # DD_TEST_DATABASE_NAME - TODO
