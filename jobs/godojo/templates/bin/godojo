@@ -7,7 +7,7 @@ cd /var/vcap/jobs/godojo/config
 
 mkdir local
 mkdir local/media
-cp -r /var/vcap/jobs/godojo/django-DefectDojo/static local/static
+cp -r /var/vcap/jobs/godojo/django-DefectDojo/dojo/static local/static
 
 cd /var/vcap/jobs/godojo/django-DefectDojo
 
