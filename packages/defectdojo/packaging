@@ -25,6 +25,7 @@ DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends \
   build-essential \
   expect \
   libcurl4-openssl-dev \
+  mysql-server-8.0 \
   mysql-server \
   libmysqlclient-dev \
   libpq-dev \
