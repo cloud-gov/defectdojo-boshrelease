@@ -25,9 +25,11 @@ DEBIAN_FRONTEND=noninteractive apt-get -y update && apt-get -y install \
   build-essential \
   expect \
   libcurl4-openssl-dev \
-  mysql-server \
   libmysqlclient-dev \
   libpq-dev \
+  postgresql \
+  postgresql-contrib \
+  postgresql-client-common \
   git \
 
 virtualenv --always-copy venv

@@ -10,4 +10,6 @@ export PATH=/var/vcap/packages/python/bin:$PATH
 
 . venv/bin/activate
 
+source /var/vcap/jobs/defectdojo/packages/defectdojo/docker/environments/postgres-redis.env
+
 python3 manage.py runserver 0.0.0.0:8080
