@@ -90,7 +90,7 @@ Settings:
   DatabaseURL: "" # DD_DATABASE_URL - Set from the DD_DB_ variables
   DatabaseUser: "" # DD_DATABASE_USER - Set from DD_DB_User
   DataUploadMaxMemorySize: 8388608 # DD_DATA_UPLOAD_MAX_MEMORY_SIZE - aka 8 mb TODO
-  Debug: True # DD_DEBUG - Boolean to set Django debugging on
+  Debug: false # DD_DEBUG - Boolean to set Django debugging on
   DjangoAdminEnabled: false # DD_DJANGO_ADMIN_ENABLED - TODO
   EmailURL: "smtp://user@:password@localhost:25" # DD_EMAIL_URL - TODO
   Env: "" # DD_ENV - TODO
@@ -131,7 +131,7 @@ Settings:
   SocialAuthOktaOauth2Enabled: "" # DD_SOCIAL_AUTH_OKTA_OAUTH2_ENABLED - Boolean to enable Okta login
   SocialAuthOktaOauth2Key: "" # DD_SOCIAL_AUTH_OKTA_OAUTH2_KEY - Okta OAuth2 key
   SocialAuthOktaOauth2Secret: "" # DD_SOCIAL_AUTH_OKTA_OAUTH2_SECRET - Okta OAuth2 secret
-  StaticRoot: "/var/vcap/jobs/godojo/django-DefectDojo" # DD_STATIC_ROOT - DD_Root + DD_Files + DD_Static
+  StaticRoot: "" # DD_STATIC_ROOT - DD_Root + DD_Files + DD_Static
   StaticURL: "/static/" # DD_STATIC_URL - URI path for static files for DefectDojo
   TeamName: "Security Team" # DD_TEAM_NAME - Name for the security team
   TestDatabaseName: "test_defectdojo" # DD_TEST_DATABASE_NAME - TODO
