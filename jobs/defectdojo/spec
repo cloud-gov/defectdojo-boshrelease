@@ -11,4 +11,13 @@ packages:
   - python
   - defectdojo
 
-properties: {}
+properties:
+  dojo.DD_DATABASE_HOST:
+    description: |
+      Database Host
+  dojo.DD_DATABASE_USER:
+    description: |
+      Database User
+  dojo.DD_DATABASE_PASSWORD:
+    description: |
+      Database Password
