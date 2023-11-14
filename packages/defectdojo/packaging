@@ -22,6 +22,7 @@ apt-get -y install --no-install-recommends \
   dnsutils \
   default-mysql-client \
   libmariadb-dev-compat \
+  default-libmysqlclient-dev \
   libpq-dev \
   postgresql-client \
   xmlsec1 \
@@ -39,6 +40,7 @@ pip3 install --no-cache-dir \
   --no-index \
   --find-links=/tmp/wheel \
   -r requirements.txt
+
 
 deactivate
 sed -i 's/^\(VIRTUAL_ENV\)=.\+$/\1="\/var\/vcap\/packages\/defectdojo\/venv"/g' venv/bin/activate
