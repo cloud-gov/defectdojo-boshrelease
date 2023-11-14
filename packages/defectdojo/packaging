@@ -17,18 +17,21 @@ export PATH=/var/vcap/packages/python/bin:$PATH
 python3 --version
 apt-get -y update
 apt-get -y install --no-install-recommends \
+  apt-transport-https \
+  libjpeg-dev \
   gcc \
+  libssl-dev \
+  yarn \
   build-essential \
-  dnsutils \
-  default-mysql-client \
-  libmariadb-dev-compat \
-  default-libmysqlclient-dev \
-  libpq-dev \
-  postgresql-client \
-  xmlsec1 \
-  git \
-  uuid-runtime \
+  expect \
   libcurl4-openssl-dev \
+  mysql-server \
+  libmysqlclient-dev \
+  libpq-dev \
+  postgresql \
+  postgresql-contrib \
+  postgresql-client-common \
+  postgresql-client-14 \
 
 virtualenv --always-copy venv
 . venv/bin/activate
