@@ -22,7 +22,6 @@ apt-get -y install --no-install-recommends \
   dnsutils \
   default-mysql-client \
   libmariadb-dev-compat \
-  default-libmysqlclient-dev \
   libpq-dev \
   postgresql-client \
   xmlsec1 \
