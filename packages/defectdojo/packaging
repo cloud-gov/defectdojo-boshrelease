@@ -25,6 +25,7 @@ apt-get -y install --no-install-recommends \
   libpq-dev \
   postgresql-client \
   postgresql \
+  postgresql-14 \
   xmlsec1 \
   git \
   uuid-runtime \
