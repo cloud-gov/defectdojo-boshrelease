@@ -23,6 +23,8 @@ apt-get -y install --no-install-recommends \
   default-mysql-client \
   libmariadb-dev-compat \
   postgresql-client \
+  postgresql-contrib \
+  postgresql-client-common \
   libpq-dev \
   xmlsec1 \
   git \

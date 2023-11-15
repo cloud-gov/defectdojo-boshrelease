@@ -5,6 +5,14 @@ set -u # report the usage of uninitialized variables
 
 apt-get -y update
 apt-get -y install --no-install-recommends \
+  libpq-dev \
+  postgresql \
+  postgresql-contrib \
+  postgresql-client-common \
   postgresql-client \
   postgresql \
   postgresql-14 \
+
+/usr/sbin/groupadd -f postgres
+/usr/sbin/useradd -s /bin/bash -m -g postgres postgres
+/usr/sbin/service postgresql start
