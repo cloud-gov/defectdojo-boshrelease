@@ -30,6 +30,7 @@ apt-get -y install --no-install-recommends \
   git \
   uuid-runtime \
   libcurl4-openssl-dev \
+  sqlite3 \
 
 virtualenv --always-copy venv
 . venv/bin/activate
