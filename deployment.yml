@@ -58,13 +58,6 @@ instance_groups:
     - name: bpm
       release: bpm
     - name: defectdojo
-      properties:
-        dojo:
-          DD_DATABASE_HOST: ((dojo_database_host))
-          DD_DATABASE_USER: ((dojo_database_user))
-          DD_DATABASE_PASSWORD: ((dojo_database_password))
-          DD_DATABASE_URL: ((dojo_database_url))
-          DD_TEST_DATABASE_URL: ((dojo_test_database_url))
       release: defectdojo
   vm_type: t3.medium
   stemcell: default

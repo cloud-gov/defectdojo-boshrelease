@@ -8,12 +8,8 @@ export PATH=/var/vcap/packages/python/bin:$PATH
 
 . venv/bin/activate
 
-export DD_DATABASE_URL=postgresql://localhost:defectdojo@postgres:5432/defectdojo
-export DD_DATABASE_ENGINE=django.db.backends.postgresql
-export DD_DATABASE_PORT=5432
-export DD_DATABASE_NAME=defectdojo
-export DD_TEST_DATABASE_NAME=test_defectdojo
-export DD_TEST_DATABASE_URL=postgresql://localhost:defectdojo@postgres:5432/test_defectdojo
+export DD_DATABASE_URL=sqlite:///defectdojo.db
+export DD_DATABASE_ENGINE=django.db.backends.sqlite3
 
 source /var/vcap/jobs/defectdojo/bin/db.env
 
