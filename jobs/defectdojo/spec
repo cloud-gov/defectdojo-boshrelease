@@ -21,3 +21,9 @@ properties:
   dojo.DD_DATABASE_PASSWORD:
     description: |
       Database Password
+  dojo.DD_DATABASE_URL:
+    description: |
+      Database URL
+  dojo.DD_TEST_DATABASE_URL:
+    description: |
+      Test Database URL
