@@ -3,7 +3,6 @@ name: defectdojo
 
 dependencies:
 - nginx
-- nodejs
 
 files:
   - defectdojo/2.25.4.tar.gz
