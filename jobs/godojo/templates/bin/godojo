@@ -3,18 +3,17 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
-cd /var/vcap/jobs/godojo/config
+cd /var/vcap/jobs/godojo
 
 mkdir local
 mkdir local/media
-cp -r /var/vcap/jobs/godojo/django-DefectDojo/dojo/static local/static
+cp -r /var/vcap/jobs/godojo/django-DefectDojo/dojo/static static
 
 cd /var/vcap/jobs/godojo/django-DefectDojo
 
 #use godojo env
 source /var/vcap/jobs/godojo/bin/activate
 
-export DD_DEBUG=True
 export DD_CSRF_TRUSTED_ORIGINS="https://dojo-beta.dev.us-gov-west-1.aws-us-gov.cloud.gov"
 
 #start celery workers
