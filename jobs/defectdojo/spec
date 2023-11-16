@@ -7,5 +7,4 @@ templates:
   config/local_settings.py: packages/defectdojo/dojo/settings/local_settings.py
 
 packages:
-  - python
   - defectdojo
