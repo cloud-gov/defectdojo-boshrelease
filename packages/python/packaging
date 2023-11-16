@@ -25,7 +25,7 @@ export PKG_CONFIG_PATH=${BOSH_INSTALL_TARGET}/libffi/lib/pkgconfig
 
 tar xf python/Python-*.tar.xz
 pushd Python*
-  ./configure --prefix=$BOSH_INSTALL_TARGET --with-system-ffi --with-ensurepip
+  ./configure --prefix=$BOSH_INSTALL_TARGET --with-system-ffi --with-ensurepip --enable-loadable-sqlite-extensions
   make -j $CPUS
   make install
 popd
