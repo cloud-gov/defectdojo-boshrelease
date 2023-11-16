@@ -15,6 +15,7 @@ cd /var/vcap/jobs/godojo/django-DefectDojo
 source /var/vcap/jobs/godojo/bin/activate
 
 export DD_DEBUG=True
+export DD_CSRF_TRUSTED_ORIGINS="https://dojo-beta.dev.us-gov-west-1.aws-us-gov.cloud.gov"
 
 #start celery workers
 C_FORCE_ROOT="true" celery -A dojo worker -l info --concurrency 3 &
