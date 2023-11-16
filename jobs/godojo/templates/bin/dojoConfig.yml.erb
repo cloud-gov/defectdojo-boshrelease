@@ -44,7 +44,7 @@ Install:
     Pass: "<%= p('dojo.DD_DB_Pass') %>" # DD_DB_Pass - Password for the database user DefectDojo will use Note: set to 24 random characters
     Host: "localhost" # DD_DB_Host - Database hostname
     Port: <%= p('dojo.DD_DB_Port') %> # DD_DB_Port - Port the database is listening on
-    Drop: false # DD_DB_Drop - Boolean to tell the installer to drop an existing DB if found
+    Drop: true # DD_DB_Drop - Boolean to tell the installer to drop an existing DB if found
   OS:
     User: "<%= p('dojo.DD_OS_User') %>" # DD_OS_User - OS user to own the DefectDojo instll and files
     Pass: "<%= p('dojo.DD_OS_Pass') %>" # DD_OS_Pass - Password for the OS user for DefectDojo Note: set to 24 random characters
