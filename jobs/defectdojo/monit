@@ -1,5 +1,0 @@
-check process defectdojo
-  with pidfile /var/vcap/sys/run/bpm/defectdojo/defectdojo.pid
-  start program "/var/vcap/jobs/bpm/bin/bpm start defectdojo"
-  stop program "/var/vcap/jobs/bpm/bin/bpm stop defectdojo"
-  group vcap
