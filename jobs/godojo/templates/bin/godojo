@@ -5,8 +5,7 @@ set -u # report the usage of uninitialized variables
 
 cd /var/vcap/jobs/godojo
 
-cp -r /var/vcap/jobs/godojo/django-DefectDojo/dojo/static static
-
+cp -r /var/vcap/jobs/godojo/defectdojo/django-DefectDojo/dojo/static static
 cd /var/vcap/jobs/godojo/django-DefectDojo
 
 #use godojo env
