@@ -9,6 +9,7 @@ templates:
 
 packages:
   - godojo
+  - nginx
 
 properties:
   dojo.DD_Version:
