@@ -1,0 +1,10 @@
+---
+name: nginx
+
+templates:
+  bin/nginx: bin/nginx.sh
+  bin/nginx.conf: bin/nginx.conf
+
+packages:
+  - nginx
+  - godojo

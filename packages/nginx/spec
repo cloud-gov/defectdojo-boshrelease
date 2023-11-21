@@ -1,6 +1,7 @@
 ---
 name: nginx
-dependencies: []
+dependencies:
+  - godojo
 
 files:
   - nginx/nginx-1.24.0.tar.gz

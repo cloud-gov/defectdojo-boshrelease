@@ -1,8 +1,7 @@
 ---
 name: godojo
 
-dependencies:
-  - nginx
+dependencies: []
 
 files:
   - godojo/godojo-v1.2.1_standard.zip
