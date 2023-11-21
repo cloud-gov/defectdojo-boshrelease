@@ -7,4 +7,3 @@ templates:
 
 packages:
   - nginx
-  - godojo
