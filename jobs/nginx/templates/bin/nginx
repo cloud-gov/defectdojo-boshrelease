@@ -3,6 +3,6 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
-/var/vcap/packages/nginx/sbin/nginx -c /var/vcap/jobs/nginx/bin/nginx.conf \
+/var/vcap/jobs/nginx/packages/nginx/sbin/nginx -c /var/vcap/jobs/nginx/bin/nginx.conf \
   >>/var/vcap/sys/log/nginx/nginx.stdout.log \
   2>>/var/vcap/sys/log/nginx/nginx.stderr.log
