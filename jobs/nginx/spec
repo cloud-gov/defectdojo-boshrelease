@@ -3,7 +3,7 @@ name: nginx
 
 templates:
   bin/nginx: bin/nginx.sh
-  bin/nginx.conf: bin/nginx.conf
+  config/nginx.conf: config/nginx.conf
   config/bpm.yml.erb: config/bpm.yml
 
 packages:
