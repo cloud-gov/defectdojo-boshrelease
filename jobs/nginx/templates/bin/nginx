@@ -12,7 +12,7 @@ mkdir -p ${RUN_DIR} ${LOG_DIR} ${TMP_DIR} ${STORE_DIR}
 
 export PATH=/var/vcap/packages/nginx/sbin:${PATH}
 
-nginx \
+exec nginx \
       -p ${TMP_DIR} \
       -c /var/vcap/jobs/nginx/config/nginx.conf \
       >>  ${LOG_DIR}/nginx.stdout.log \
