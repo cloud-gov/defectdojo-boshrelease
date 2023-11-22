@@ -9,7 +9,7 @@ TMP_DIR=/var/vcap/sys/tmp/nginx
 STORE_DIR=/var/vcap/store/nginx
 mkdir -p ${RUN_DIR} ${LOG_DIR} ${TMP_DIR} ${STORE_DIR}
 
-source /var/vcap/packages/nginx/config/runtime.env
+source /var/vcap/jobs/nginx/config/runtime.env
 
 exec nginx \
       -p ${TMP_DIR} \
