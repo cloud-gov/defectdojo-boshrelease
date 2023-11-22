@@ -6,6 +6,8 @@ processes:
     additional_volumes:
     - path: /var/vcap/sys
       writable: true
+    - path: /var/vcap/sys/tmp
+      writable: true
     - path: /var/vcap/sys/tmp/nginx
       writable: true
       allow_executions: true
