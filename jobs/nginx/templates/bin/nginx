@@ -10,7 +10,7 @@ STORE_DIR=/var/vcap/store/nginx
 mkdir -p ${RUN_DIR} ${LOG_DIR} ${TMP_DIR} ${STORE_DIR}
 
 
-export PATH=/var/vcap/packages/nginx_prometheus/sbin:${PATH}
+export PATH=/var/vcap/packages/nginx/sbin:${PATH}
 
 nginx \
       -p ${TMP_DIR} \
