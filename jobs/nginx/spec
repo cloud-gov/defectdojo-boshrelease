@@ -5,6 +5,7 @@ templates:
   bin/nginx: bin/nginx.sh
   config/nginx.conf: config/nginx.conf
   config/bpm.yml.erb: config/bpm.yml
+  config/runtime.env: config/runtime.env
 
 packages:
   - nginx
