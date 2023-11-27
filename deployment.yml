@@ -13,8 +13,6 @@ releases:
     version: latest
   - name: bosh-dns-aliases
     version: latest
-  - name: nginx
-    version: latest
 
 update:
   canaries: 2
@@ -78,7 +76,7 @@ instance_groups:
             DD_ADMIN_User: ((dojo_admin_user))
             DD_ADMIN_Pass: ((dojo_admin_pass))
     - name: nginx
-      release: nginx
+      release: defectdojo
   vm_type: t3.medium
   stemcell: default
   persistent_disk: 10240
