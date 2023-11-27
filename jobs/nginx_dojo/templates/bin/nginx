@@ -8,8 +8,8 @@ kill_nginx() {
     kill -9 $NGINX_PID
 }
 
-source /var/vcap/packages/nginx/bosh/runtime.env
+source /var/vcap/packages/nginx_dojo/bosh/runtime.env
 
-nginx -c /var/vcap/jobs/nginx/config/nginx.conf &
+nginx -c /var/vcap/jobs/nginx_dojo/config/nginx.conf &
 NGINX_PID=$!
 trap kill_nginx EXIT
