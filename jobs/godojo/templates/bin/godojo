@@ -17,4 +17,4 @@ C_FORCE_ROOT="true" celery -A dojo worker -l info --concurrency 3 &
 C_FORCE_ROOT="true" celery --app dojo beat -l info &
 
 # Startup DefectDojo on port 8081
-uwsgi --http :8081 --module dojo.wsgi
+uwsgi --socket godojo.sock --module dojo.wsgi --chmod-socket=664
