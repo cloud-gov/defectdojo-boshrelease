@@ -13,6 +13,8 @@ releases:
     version: latest
   - name: bosh-dns-aliases
     version: latest
+  - name: nginx
+    version: latest
 
 update:
   canaries: 2
