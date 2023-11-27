@@ -76,7 +76,7 @@ instance_groups:
             DD_ADMIN_User: ((dojo_admin_user))
             DD_ADMIN_Pass: ((dojo_admin_pass))
     - name: nginx
-      release: defectdojo
+      release: nginx
   vm_type: t3.medium
   stemcell: default
   persistent_disk: 10240
