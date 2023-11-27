@@ -1,18 +1,9 @@
 #!/bin/bash
 
-set -e # exit immediately if a simple command exits with a non-zero status
-set -u # report the usage of uninitialized variables
+set -eux
 
-RUN_DIR=/var/vcap/sys/run/nginx
-LOG_DIR=/var/vcap/sys/log/nginx
-TMP_DIR=/var/vcap/sys/tmp/nginx
-STORE_DIR=/var/vcap/store/nginx
-mkdir -p ${RUN_DIR} ${LOG_DIR} ${TMP_DIR} ${STORE_DIR}
+source /var/vcap/packages/nginx/bosh/runtime.env
 
-source /var/vcap/jobs/nginx/config/runtime.env
-
-exec nginx \
-      -p ${TMP_DIR} \
-      -c /var/vcap/jobs/nginx/config/nginx.conf \
-      >>  ${LOG_DIR}/nginx.stdout.log \
-      2>> ${LOG_DIR}/nginx.stderr.log
+nginx -c /var/vcap/jobs/nginx/config/nginx.conf \
+  >>/var/vcap/sys/log/nginx/nginx.stdout.log \
+  2>>/var/vcap/sys/log/nginx/nginx.stderr.log
