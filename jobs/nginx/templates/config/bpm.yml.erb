@@ -1,0 +1,13 @@
+processes:
+  - name: nginx_dojo
+    executable: /var/vcap/jobs/nginx/bin/nginx.sh
+    persistent_disk: true
+    ephemeral_disk: true
+    additional_volumes:
+    - path: /var/vcap/sys/tmp/nginx
+      writable: true
+      allow_executions: true
+    - path: /var/vcap/jobs/nginx/config
+      writable: true
+    capabilities:
+    - SYS_RESOURCE
