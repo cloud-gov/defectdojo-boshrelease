@@ -75,7 +75,7 @@ instance_groups:
             DD_OS_GID: ((dojo_os_gid))
             DD_ADMIN_User: ((dojo_admin_user))
             DD_ADMIN_Pass: ((dojo_admin_pass))
-    - name: nginx
+    - name: nginx_dojo
       release: defectdojo
   vm_type: t3.medium
   stemcell: default
