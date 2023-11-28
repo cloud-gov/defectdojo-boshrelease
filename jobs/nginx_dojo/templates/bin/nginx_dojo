@@ -2,6 +2,8 @@
 
 set -eux
 
+LOG_DIR=/var/vcap/sys/log/nginx_dojo
+
 source /var/vcap/packages/nginx/bosh/runtime.env
 
 nginx -c /var/vcap/jobs/nginx_dojo/config/nginx.conf \
