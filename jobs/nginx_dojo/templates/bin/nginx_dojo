@@ -3,11 +3,9 @@
 set -eux
 
 LOG_DIR=/var/vcap/sys/log/nginx_dojo
-TMP_DIR=/var/vcap/sys/tmp/nginx_dojo
 
 source /var/vcap/packages/nginx/bosh/runtime.env
 
 nginx -c /var/vcap/jobs/nginx_dojo/config/nginx.conf \
-      -p ${TMP_DIR} \
-      >>  ${LOG_DIR}/nginx_doko.stdout.log \
+      >>  ${LOG_DIR}/nginx_dojo.stdout.log \
       2>> ${LOG_DIR}/nginx_dojo.stderr.log
