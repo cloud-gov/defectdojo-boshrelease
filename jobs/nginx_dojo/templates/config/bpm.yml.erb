@@ -9,5 +9,7 @@ processes:
       allow_executions: true
     - path: /var/vcap/jobs/nginx_dojo/config
       writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo
+      writable: true
     capabilities:
     - SYS_RESOURCE
