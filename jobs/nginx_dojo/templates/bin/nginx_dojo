@@ -3,7 +3,7 @@
 set -eux
 
 LOG_DIR=/var/vcap/sys/log/nginx_dojo
-TMP_DIR=/var/vcap/sys/tmp/nginx
+TMP_DIR=/var/vcap/sys/tmp/nginx_dojo
 
 source /var/vcap/packages/nginx/bosh/runtime.env
 
