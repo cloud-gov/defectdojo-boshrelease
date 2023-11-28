@@ -4,5 +4,6 @@ set -eux
 
 source /var/vcap/packages/nginx/bosh/runtime.env
 
-nginx -c /var/vcap/jobs/nginx_dojo/config/nginx.conf &
-NGINX_PID=$!
+nginx -c /var/vcap/jobs/nginx_dojo/config/nginx.conf \
+      >>  ${LOG_DIR}/nginx.stdout.log \
+      2>> ${LOG_DIR}/nginx.stderr.log
