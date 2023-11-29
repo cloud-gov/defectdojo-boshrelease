@@ -16,7 +16,6 @@ exec 2>> ${LOG_DIR}/$(basename "$0").stderr.log
 
 case $1 in
   start)
-    pid_guard ${PIDFILE} "nginx_dojo"
 
     exec nginx \
       -p ${TMP_DIR} \
