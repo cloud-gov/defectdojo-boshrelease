@@ -11,11 +11,14 @@ mkdir -p ${RUN_DIR} ${LOG_DIR} ${TMP_DIR} ${STORE_DIR}
 PIDFILE=${RUN_DIR}/nginx_dojo.pid
 
 source /var/vcap/packages/nginx/bosh/runtime.env
+source /var/vcap/jobs/nginx_dojo/helpers/ctl_utils.sh
 exec 1>> ${LOG_DIR}/$(basename "$0").stdout.log
 exec 2>> ${LOG_DIR}/$(basename "$0").stderr.log
 
 case $1 in
   start)
+
+    pid_guard $PIDFILE $JOB_NAME
 
     exec nginx \
       -p ${TMP_DIR} \
