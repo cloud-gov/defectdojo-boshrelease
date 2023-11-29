@@ -19,6 +19,8 @@ processes:
       writable: true
     - path: /var/vcap/packages/nginx/uwsgi_temp
       writable: true
+    - path: /var/vcap/packages/nginx/logs
+      writable: true
     - path: /var/vcap/jobs/nginx_dojo/config
       writable: true
     - path: /var/vcap/jobs/godojo/django-DefectDojo
