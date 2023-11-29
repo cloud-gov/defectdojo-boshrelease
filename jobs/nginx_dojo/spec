@@ -2,7 +2,7 @@
 name: nginx_dojo
 
 templates:
-  bin/nginx_dojo: bin/nginx.sh
+  bin/nginx_dojo: bin/nginx_dojo.sh
   config/nginx.conf: config/nginx.conf
 
 packages:
