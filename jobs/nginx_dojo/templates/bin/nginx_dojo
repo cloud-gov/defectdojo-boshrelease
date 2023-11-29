@@ -1,16 +1,38 @@
 #!/bin/bash
 
-set -eux
+set -eu
 
-kill_nginx() {
-    # we must be sure to kill nginx so that `bosh run-errand` returns,
-    # otherwise `bosh run-errand` will hang indefinitely
-    kill -9 $NGINX_PID
-}
+RUN_DIR=/var/vcap/sys/run/nginx_dojo
+LOG_DIR=/var/vcap/sys/log/nginx_dojo
+TMP_DIR=/var/vcap/sys/tmp/nginx_dojo
+STORE_DIR=/var/vcap/store/nginx_dojo
+mkdir -p ${RUN_DIR} ${LOG_DIR} ${TMP_DIR} ${STORE_DIR}
+
+PIDFILE=${RUN_DIR}/nginx_dojo.pid
 
 source /var/vcap/packages/nginx/bosh/runtime.env
-cd /var/vcap/packages/nginx/
+exec 1>> ${LOG_DIR}/$(basename "$0").stdout.log
+exec 2>> ${LOG_DIR}/$(basename "$0").stderr.log
 
-nginx -c /var/vcap/jobs/nginx_dojo/config/nginx.conf &
-NGINX_PID=$!
-trap kill_nginx EXIT
+case $1 in
+  start)
+    pid_guard ${PIDFILE} "nginx_dojo"
+
+    exec nginx \
+      -p ${TMP_DIR} \
+      -c /var/vcap/jobs/nginx_dojo/config/nginx.conf \
+      >>  ${LOG_DIR}/nginx.stdout.log \
+      2>> ${LOG_DIR}/nginx.stderr.log
+    ;;
+
+  stop)
+    kill_and_wait ${PIDFILE}
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+    ;;
+
+esac
+exit 0
