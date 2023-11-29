@@ -7,15 +7,17 @@ processes:
     - path: /var/vcap/sys/tmp/nginx_dojo
       writable: true
       allow_executions: true
-    - path: /var/vcap/sys/tmp/client_body_temp
+    - path: /var/vcap/packages/nginx
       writable: true
-    - path: /var/vcap/sys/tmp/fastcgi_temp
+    - path: /var/vcap/packages/nginx/client_body_temp
       writable: true
-    - path: /var/vcap/sys/tmp/proxy_temp
+    - path: /var/vcap/packages/nginx/fastcgi_temp
       writable: true
-    - path: /var/vcap/sys/tmp/scgi_temp
+    - path: /var/vcap/packages/nginx/proxy_temp
       writable: true
-    - path: /var/vcap/sys/tmp/uwsgi_temp
+    - path: /var/vcap/packages/nginx/scgi_temp
+      writable: true
+    - path: /var/vcap/packages/nginx/uwsgi_temp
       writable: true
     - path: /var/vcap/jobs/nginx_dojo/config
       writable: true
