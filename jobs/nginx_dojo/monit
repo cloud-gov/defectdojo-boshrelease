@@ -1,5 +1,0 @@
-check process nginx_dojo
-  with pidfile /var/vcap/sys/run/bpm/nginx_dojo/nginx_dojo.pid
-  start program "/var/vcap/jobs/bpm/bin/bpm start nginx_dojo"
-  stop program "/var/vcap/jobs/bpm/bin/bpm stop nginx_dojo"
-  group vcap

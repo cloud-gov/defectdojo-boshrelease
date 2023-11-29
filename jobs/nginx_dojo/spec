@@ -4,7 +4,6 @@ name: nginx_dojo
 templates:
   bin/nginx_dojo: bin/nginx.sh
   config/nginx.conf: config/nginx.conf
-  config/bpm.yml.erb: config/bpm.yml
 
 packages:
   - nginx
