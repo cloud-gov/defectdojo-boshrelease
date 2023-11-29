@@ -2,10 +2,15 @@
 
 set -eux
 
-LOG_DIR=/var/vcap/sys/log/nginx_dojo
+kill_nginx() {
+    # we must be sure to kill nginx so that `bosh run-errand` returns,
+    # otherwise `bosh run-errand` will hang indefinitely
+    kill -9 $NGINX_PID
+}
 
 source /var/vcap/packages/nginx/bosh/runtime.env
+cd /var/vcap/packages/nginx/
 
-nginx -c /var/vcap/jobs/nginx_dojo/config/nginx.conf \
-      >>  ${LOG_DIR}/nginx_dojo.stdout.log \
-      2>> ${LOG_DIR}/nginx_dojo.stderr.log
+nginx -c /var/vcap/jobs/nginx_dojo/config/nginx.conf &
+NGINX_PID=$!
+trap kill_nginx EXIT
