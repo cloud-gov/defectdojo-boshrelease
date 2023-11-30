@@ -61,8 +61,8 @@ instance_groups:
       release: defectdojo
       properties:
         dojo:
-            DD_Version: ((dojo_version))
-            DD_DB_Engine: ((dojo_db_engine))
+            DD_Quiet: ((dojo_install_quiet))
+            DD_Trace: ((dojo_install_trace))
             DD_DB_Ruser: ((dojo_db_ruser))
             DD_DB_Rpass: ((dojo_db_rpass))
             DD_DB_User: ((dojo_db_user))
@@ -77,6 +77,9 @@ instance_groups:
             DD_ADMIN_Pass: ((dojo_admin_pass))
     - name: nginx_dojo
       release: defectdojo
+      properties:
+        nginx:
+          server_name: ((nginx_server_name))
   vm_type: t3.medium
   stemcell: default
   persistent_disk: 10240
