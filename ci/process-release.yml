@@ -1,9 +1,0 @@
----
-platform: linux
-
-inputs:
-  - name: release
-  - name: src
-
-run:
-  path: src/ci/process-release.sh
