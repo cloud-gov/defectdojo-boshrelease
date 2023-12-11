@@ -12,4 +12,4 @@ cp standard/godojo ${BOSH_INSTALL_TARGET}/godojo
 
 cp godojo/dojoConfig.yml ${BOSH_INSTALL_TARGET}/dojoConfig.yml
 
-./{$BOSH_INSTALL_TARGET}/godojo
+{$BOSH_INSTALL_TARGET}/godojo
