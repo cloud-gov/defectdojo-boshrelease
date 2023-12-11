@@ -8,12 +8,9 @@ apt-get -y install --no-install-recommends \
 
 unzip godojo/godojo-v1.2.1_standard.zip
 
-pushd standard
+cp standard/godojo ${BOSH_INSTALL_TARGET}/godojo
 
-cp godojo ${BOSH_INSTALL_TARGET}/godojo
-
-popd
-
+mkdir /var/vcap/jobs/godojo/bin
 cp godojo/dojoConfig.yml /var/vcap/jobs/godojo/bin/dojoConfig.yml
 
 cd /var/vcap/jobs/godojo/bin
