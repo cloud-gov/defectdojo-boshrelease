@@ -12,6 +12,6 @@ cp standard/godojo ${BOSH_INSTALL_TARGET}/godojo
 
 cp godojo/dojoConfig.yml ${BOSH_INSTALL_TARGET}/dojoConfig.yml
 
-mkdir ${BOSH_INSTALL_TARGET}/logs
+cd ${BOSH_INSTALL_TARGET}
 
-${BOSH_INSTALL_TARGET}/godojo
+./godojo
