@@ -50,7 +50,7 @@ Install:
     Pass: ((DD_OS_Pass)) # DD_OS_Pass - Password for the OS user for DefectDojo Note: set to 24 random characters
     Group: ((DD_OS_Group)) # DD_OS_Group - OS Group to own the DefectDojo install and files
     UID: ((DD_OS_UID)) # DD_OS_UID - User ID for the DefectDojo OS user
-    GID: ((DD_OS_GID))# DD_OS_GID - Group ID for the DefectDojo OS group
+    GID: ((DD_OS_GID)) # DD_OS_GID - Group ID for the DefectDojo OS group
   Settings:
     Dist: "/dojo/settings/settings.dist.py" # DD_SET_Dist - Path of the distributed settings file relative to DD_Source
     File: "/dojo/settings/settings.py" # DD_SET_File - Path of the settings.py file relative to DD_Source Note: Created at install time
