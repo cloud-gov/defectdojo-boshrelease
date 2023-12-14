@@ -14,50 +14,50 @@
 # SecretKey
 
 Install:
-  Version: <%= p('dojo.install.DD_Version') %> # DD_Version - Release version of DefectDojo from Github Releases
+  Version: ((DD_Version)) # DD_Version - Release version of DefectDojo from Github Releases
   SourceInstall: false # DD_SourceInstall - Boolean if a source install is desired (vs a release)
   # If ^ is true, a souce code install will occur overriding the release version provided
   SourceBranch: "dev" # DD_SourceBranch - The branch's HEAD to be checked out if SourceInstall is true
   SourceCommit:  22294ab6c69468057bce79386768869b2788de5d # DD_SourceCommit - If there is a value here, the specific commit will be used over the branch ^
-  Quiet: <%= p('dojo.install.DD_Quiet') %> # DD_Quiet - Suppress normal output - only errors will be shown
-  Trace: <%= p('dojo.install.DD_Trace') %> # DD_Trace - Boolean to enable the most verbose logging during install
-  Redact: <%= p('dojo.install.DD_Redact') %> # DD_Redact - Boolean to redact sensitive info from the logs
+  Quiet: ((DD_Quiet)) # DD_Quiet - Suppress normal output - only errors will be shown
+  Trace: ((DD_Trace)) # DD_Trace - Boolean to enable the most verbose logging during install
+  Redact: ((DD_Redact)) # DD_Redact - Boolean to redact sensitive info from the logs
   DevInstall: false # DD_Dev_Install - Boolean for development installs, uses fixed values
   Prompt: false # DD_Prompt - Boolean to prompt for configuration values - NOT IMPLEMENTED YET
   Mac: false # DD_Mac - Boolean to set the install target as a Mac - NOT IMPLEMENTED YET
-  Root: <%= p('dojo.install.DD_Root') %> # DD_Root - Root directory for the DefectDojo app Note: No trailing /
-  Source: <%= p('dojo.install.DD_Source') %> # DD_Source - Directory in DD_Root for DefectDojo source code
-  Files: <%= p('dojo.install.DD_Files') %> # DD_Files - Directory in DD_Root for local files (static assets, uploads, etc)
-  Media: <%= p('dojo.install.DD_Media') %> # DD_Media - Directory in DD_Files for uploaded files (screenshots, test artifacts, etc)
-  Static: <%= p('dojo.install.DD_Static') %> # DD_Static - Directory in DD_Files for static asset files (JS, images, etc)
-  App: <%= p('dojo.install.DD_App') %> # DD_App - Directory in DD_Source where the DefectDojo Django app is located
+  Root: ((DD_Root)) # DD_Root - Root directory for the DefectDojo app Note: No trailing /
+  Source: ((DD_Source)) # DD_Source - Directory in DD_Root for DefectDojo source code
+  Files: ((DD_Files)) # DD_Files - Directory in DD_Root for local files (static assets, uploads, etc)
+  Media: ((DD_Media)) # DD_Media - Directory in DD_Files for uploaded files (screenshots, test artifacts, etc)
+  Static: ((DD_Static)) # DD_Static - Directory in DD_Files for static asset files (JS, images, etc)
+  App: ((DD_App)) # DD_App - Directory in DD_Source where the DefectDojo Django app is located
   Sampledata: false # DD_Sampledata - Boolean for installing sample data during the install
   PullSource: true # DD_PullSource - Boolean for installer to download source for DefectDojo Note: Usually for debugging the installer itself
   DB:
-    Engine: <%= p('dojo.DD_DB_Engine') %> # DD_DB_Engine - Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
-    Local: <%= p('dojo.DD_DB_Local') %> # DD_DB_Local - Boolean for when DB is on the same host/server/vm (local)
-    Exists: <%= p('dojo.DD_DB_Exists') %> # DD_DB_Exists - Boolean for when DB for DefectDojo already exists so no install needed
-    Ruser: <%= p('dojo.DD_DB_Ruser') %> # DD_DB_Ruser - Superuser for the database Note: this and Rpass below REQUIRED for remote and existing DBs
-    Rpass: <%= p('dojo.DD_DB_Rpass') %> # DD_DB_Rpass - Password for the database superuser Note: set to 24 random characters
-    Name: <%= p('dojo.DD_DB_Name') %> # DD_DB_Name - Name of the database that DefectDojo will use
-    User: <%= p('dojo.DD_DB_User') %> # DD_DB_User - Username of the database user that DefectDojo will use
-    Pass: <%= p('dojo.DD_DB_Pass') %> # DD_DB_Pass - Password for the database user DefectDojo will use Note: set to 24 random characters
-    Host: <%= p('dojo.DD_DB_Host') %> # DD_DB_Host - Database hostname
-    Port: <%= p('dojo.DD_DB_Port') %> # DD_DB_Port - Port the database is listening on
-    Drop: <%= p('dojo.DD_DB_Drop') %> # DD_DB_Drop - Boolean to tell the installer to drop an existing DB if found
+    Engine: ((DD_DB_Engine)) # DD_DB_Engine - Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
+    Local: ((DD_DB_Local)) # DD_DB_Local - Boolean for when DB is on the same host/server/vm (local)
+    Exists: ((DD_DB_Exists)) # DD_DB_Exists - Boolean for when DB for DefectDojo already exists so no install needed
+    Ruser: ((DD_DB_Ruser)) # DD_DB_Ruser - Superuser for the database Note: this and Rpass below REQUIRED for remote and existing DBs
+    Rpass: ((DD_DB_Rpass)) # DD_DB_Rpass - Password for the database superuser Note: set to 24 random characters
+    Name: ((DD_DB_Name)) # DD_DB_Name - Name of the database that DefectDojo will use
+    User: ((DD_DB_User)) # DD_DB_User - Username of the database user that DefectDojo will use
+    Pass: ((DD_DB_Pass)) # DD_DB_Pass - Password for the database user DefectDojo will use Note: set to 24 random characters
+    Host: ((DD_DB_Host)) # DD_DB_Host - Database hostname
+    Port: ((DD_DB_Port)) # DD_DB_Port - Port the database is listening on
+    Drop: ((DD_DB_Drop)) # DD_DB_Drop - Boolean to tell the installer to drop an existing DB if found
   OS:
-    User: <%= p('dojo.DD_OS_User') %> # DD_OS_User - OS user to own the DefectDojo instll and files
-    Pass: <%= p('dojo.DD_OS_Pass') %> # DD_OS_Pass - Password for the OS user for DefectDojo Note: set to 24 random characters
-    Group: <%= p('dojo.DD_OS_Group') %> # DD_OS_Group - OS Group to own the DefectDojo install and files
-    UID: <%= p('dojo.DD_OS_UID') %> # DD_OS_UID - User ID for the DefectDojo OS user
-    GID: <%= p('dojo.DD_OS_GID') %> # DD_OS_GID - Group ID for the DefectDojo OS group
+    User: ((DD_OS_User)) # DD_OS_User - OS user to own the DefectDojo instll and files
+    Pass: ((DD_OS_Pass)) # DD_OS_Pass - Password for the OS user for DefectDojo Note: set to 24 random characters
+    Group: ((DD_OS_Group)) # DD_OS_Group - OS Group to own the DefectDojo install and files
+    UID: ((DD_OS_UID)) # DD_OS_UID - User ID for the DefectDojo OS user
+    GID: ((DD_OS_GID)) # DD_OS_GID - Group ID for the DefectDojo OS group
   Settings:
     Dist: "/dojo/settings/settings.dist.py" # DD_SET_Dist - Path of the distributed settings file relative to DD_Source
     File: "/dojo/settings/settings.py" # DD_SET_File - Path of the settings.py file relative to DD_Source Note: Created at install time
     Env: "/dojo/settings/.env.prod" # DD_SET_Env - Path to DefectDojo's environmental variables file
   Admin:
-    User: "<%= p('dojo.DD_ADMIN_User') %>" # DD_ADMIN_User - Admin user for the DefectDojo web app
-    Pass: "<%= p('dojo.DD_ADMIN_Pass') %>" # DD_ADMIN_Pass - Password for the DefectDojo web app admin user Note: set to 24 random characters
+    User: ((DD_ADMIN_User)) # DD_ADMIN_User - Admin user for the DefectDojo web app
+    Pass: ((DD_ADMIN_Pass)) # DD_ADMIN_Pass - Password for the DefectDojo web app admin user Note: set to 24 random characters
     Email: "admin@localhost" # DD_ADMIN_Email - Email address for the web app admin user
     First: "Default" # DD_ADMIN_First - Web app admin users's first name
     Last: "Admin" # DD_ADMIN_Last - Web app admin users's last name

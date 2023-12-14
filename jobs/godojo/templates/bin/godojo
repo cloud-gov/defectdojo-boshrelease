@@ -3,12 +3,14 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
-cd /var/vcap/jobs/godojo/django-DefectDojo
+export GIT_PYTHON_REFRESH=quiet
+
+cd /var/vcap/packages/godojo/bin/django-DefectDojo
 
 #use godojo env
-source /var/vcap/jobs/godojo/bin/activate
+source /var/vcap/packages/godojo/bin/bin/activate
 
-export DD_CSRF_TRUSTED_ORIGINS="https://dojo-beta.dev.us-gov-west-1.aws-us-gov.cloud.gov"
+export PATH=/var/vcap/packages/godojo/bin/bin:${PATH}
 
 #start celery workers
 C_FORCE_ROOT="true" celery -A dojo worker -l info --concurrency 3 &
