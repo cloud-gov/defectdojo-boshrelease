@@ -10,8 +10,15 @@ unzip godojo/godojo-v1.2.1_standard.zip
 
 cp standard/godojo ${BOSH_INSTALL_TARGET}/godojo
 
-cp godojo/dojoConfig.yml ${BOSH_INSTALL_TARGET}/dojoConfig.yml
+cp godojo/dojoConfig.template.yml ${BOSH_INSTALL_TARGET}/dojoConfig.template.yml
 
 cd ${BOSH_INSTALL_TARGET}
+
+#create dojoConfig file from template file and bosh variables
+( echo "cat <<EOF >dojoConfig.yml";
+  cat dojoConfig.template.yml;
+  echo "EOF";
+) >temp.yml
+. temp.yml
 
 ./godojo
