@@ -3,6 +3,7 @@ name: godojo
 
 templates:
   bin/godojo: bin/godojo.sh
+  bin/pre-start.erb: bin/pre-start
   config/bpm.yml.erb: config/bpm.yml
   config/dojoConfig.yml.erb: bin/dojoConfig.yml
 
