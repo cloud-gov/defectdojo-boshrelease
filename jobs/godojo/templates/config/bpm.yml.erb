@@ -7,9 +7,13 @@ processes:
     - path: /var/vcap/sys/tmp/godojo
       writable: true
       allow_executions: true
+    - path: /var/vcap/jobs/godojo
+      writeable: true
     - path: /var/vcap/jobs/godojo/config
       writable: true
     - path: /var/vcap/jobs/godojo/django-DefectDojo
+      writable: true
+    - path: /var/vcap/jobs/godojo/logs
       writable: true
     capabilities:
     - SYS_RESOURCE
