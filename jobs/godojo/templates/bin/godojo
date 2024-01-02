@@ -5,12 +5,12 @@ set -u # report the usage of uninitialized variables
 
 export GIT_PYTHON_REFRESH=quiet
 
-cd /var/vcap/packages/godojo/bin/django-DefectDojo
+cd /var/vcap/jobs/godojo/django-DefectDojo
 
 #use godojo env
-source /var/vcap/packages/godojo/bin/bin/activate
+source /var/vcap/jobs/godojo/bin/activate
 
-export PATH=/var/vcap/packages/godojo/bin/bin:${PATH}
+export PATH=/var/vcap/jobs/godojo/bin:${PATH}
 export DD_CSRF_TRUSTED_ORIGINS='https://defectdojo.fr-stage.cloud.gov'
 
 #start celery workers

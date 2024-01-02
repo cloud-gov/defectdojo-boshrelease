@@ -4,6 +4,110 @@ name: godojo
 templates:
   bin/godojo: bin/godojo.sh
   config/bpm.yml.erb: config/bpm.yml
+  config/dojoConfig.yml.erb: bin/dojoConfig.yml
 
 packages:
   - godojo
+
+properties:
+  dojo.install.version:
+    description: |
+      Release version of DefectDojo from Github Releases
+    default: "2.27.4"
+  dojo.install.quiet:
+    description: |
+      Suppress normal output - only errors will be shown
+    default: true
+  dojo.install.trace:
+    description: |
+      Boolean to enable the most verbose logging during install
+    default: false
+  dojo.install.redact:
+    description: |
+      Boolean to redact sensitive info from the logs
+    default: true
+  dojo.install.root:
+    description: |
+      Root directory for the DefectDojo app Note: No trailing /
+    default: "/var/vcap/jobs/godojo"
+  dojo.install.source:
+    description: |
+      Directory in DD_Root for DefectDojo source code
+    default: "django-DefectDojo"
+  dojo.install.files:
+    description: |
+      Directory in DD_Root for local files (static assets, uploads, etc)
+    default: "django-DefectDojo"
+  dojo.install.media:
+    description: |
+      Directory in DD_Files for uploaded files (screenshots, test artifacts, etc)
+    default: "media"
+  dojo.install.static:
+    description: |
+      Directory in DD_Files for static asset files (JS, images, etc)
+    default: "static"
+  dojo.install.app:
+    description: |
+      Directory in DD_Source where the DefectDojo Django app is located
+    default: "dojo"
+  dojo.db.engine:
+    description: |
+      Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
+    default: "PostgreSQL"
+  dojo.db.local:
+    description: |
+      Boolean for when DB is on the same host/server/vm
+    default: true
+  dojo.db.exists:
+    description: |
+      Boolean for when DB for DefectDojo already exists so no install needed
+    default: false
+  dojo.db.ruser:
+    description: |
+      Superuser for the database
+  dojo.db.rpass:
+    description: |
+      Password for the database superuser
+  dojo.db.name:
+    description: |
+      Name of the database that DefectDojo will use
+    default: dojodb
+  dojo.db.user:
+    description: |
+      Username of the database user that DefectDojo will use
+  dojo.db.pass:
+    description: |
+      Password for the database user DefectDojo will use
+  dojo.db.host:
+    description: |
+      Database hostname
+    default: localhost
+  dojo.db.port:
+    description: |
+      Port the database is listening on
+    default: 5432
+  dojo.db.drop:
+    description: |
+      Boolean to tell the installer to drop an existing DB if found
+    default: false
+  dojo.os.user:
+    description: |
+      OS user to own the DefectDojo instll and files
+  dojo.os.pass:
+    description: |
+      Password for the OS user for DefectDojo
+  dojo.os.group:
+    description: |
+      OS Group to own the DefectDojo install and files
+  dojo.os.uid:
+    description: |
+      User ID for the DefectDojo OS user
+  dojo.os.gid:
+    description: |
+      Group ID for the DefectDojo OS group
+  dojo.admin.user:
+    description: |
+      Admin user for the DefectDojo web app
+  dojo.admin.pass:
+    description: |
+      Password for the DefectDojo web app admin user
