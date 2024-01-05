@@ -5,3 +5,15 @@ set -u # report the usage of uninitialized variables
 
 cd /var/vcap/jobs/godojo/bin
 /var/vcap/jobs/godojo/packages/godojo/godojo
+
+# grant user role to root user
+DB_RUSER="<%= p('dojo.db.ruser') %>"
+DB_USER="<%= p('dojo.db.user') %>"
+DB_HOST="<%= p('dojo.db.host') %>"
+DB_PORT="<%= p('dojo.db.port') %>"
+DB_COMMAND="GRANT $DB_USER TO $DB_RUSER;"
+
+PGPASSWORD="<%= p('dojo.db.rpass') %>" psql --host=$DB_HOST \
+ --username=$DB_RUSER \
+ --port=$DB_PORT \
+ --command=$DB_COMMAND
