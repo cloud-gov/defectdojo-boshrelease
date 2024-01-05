@@ -13,7 +13,7 @@ DB_HOST="<%= p('dojo.db.host') %>"
 DB_PORT="<%= p('dojo.db.port') %>"
 DB_COMMAND="GRANT $DB_USER TO $DB_RUSER;"
 
-PGPASSWORD="<%= p('dojo.db.rpass') %>" psql --host=$DB_HOST \
- --username=$DB_RUSER \
- --port=$DB_PORT \
- --command=$DB_COMMAND
+PGPASSWORD="<%= p('dojo.db.rpass') %>" psql --host="$DB_HOST" \
+ --username="$DB_RUSER" \
+ --port="$DB_PORT" \
+ --command="$DB_COMMAND"
