@@ -9,10 +9,9 @@ cd /var/vcap/jobs/godojo/django-DefectDojo
 
 #use godojo env
 source /var/vcap/jobs/godojo/bin/activate
+source /var/vcap/jobs/godojo/config/dojo.env
 
 export PATH=/var/vcap/jobs/godojo/bin:${PATH}
-export DD_CSRF_TRUSTED_ORIGINS='https://defectdojo.fr-stage.cloud.gov'
-export DD_AUTH_REMOTEUSER_ENABLED=True
 
 #start celery workers
 C_FORCE_ROOT="true" celery -A dojo worker -l info --concurrency 3 &
