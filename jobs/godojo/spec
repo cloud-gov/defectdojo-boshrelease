@@ -114,7 +114,7 @@ properties:
     description: |
       Password for the DefectDojo web app admin user
   dojo.csrf.trusted_origins:
-    description: ]
+    description: |
       Trusted origins for csrf
   dojo.auth.client:
     description: |
