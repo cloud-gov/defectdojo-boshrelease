@@ -116,3 +116,12 @@ properties:
   dojo.csrf.trusted_origins:
     description: |
       Trusted origins for csrf
+  dojo.auth.client:
+    description: |
+      OAuth client name
+  dojo.auth.secret:
+    description: |
+      OAuth client secret
+  dojo.auth.domain:
+    description: |
+      OAuth domain name
