@@ -119,3 +119,6 @@ properties:
   dojo.auth.remoteuser_trusted_proxy:
     description: |
       List of trusted proxies for remote user authentication
+  dojo.auth.username_header:
+    description: |
+      Header containing the user's name
