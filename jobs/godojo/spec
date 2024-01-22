@@ -116,9 +116,12 @@ properties:
   dojo.csrf.trusted_origins:
     description: |
       Trusted origins for csrf
-  dojo.auth.remoteuser_trusted_proxy:
+  dojo.auth.oidc_endpoint:
     description: |
-      List of trusted proxies for remote user authentication
-  dojo.auth.username_header:
+      OIDC endpoint
+  dojo.auth.oidc_key:
     description: |
-      Header containing the user's name
+      OIDC auth client
+  dojo.auth.oidc_secret:
+    description: |
+      OIDC auth secret
