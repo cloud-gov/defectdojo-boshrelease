@@ -18,7 +18,7 @@ Install:
   SourceInstall: true # DD_SourceInstall - Boolean if a source install is desired (vs a release)
   # If ^ is true, a souce code install will occur overriding the release version provided
   SourceBranch: "oidc-login" # DD_SourceBranch - The branch's HEAD to be checked out if SourceInstall is true
-  SourceCommit:  22294ab6c69468057bce79386768869b2788de5d # DD_SourceCommit - If there is a value here, the specific commit will be used over the branch ^
+  SourceCommit: # DD_SourceCommit - If there is a value here, the specific commit will be used over the branch ^
   Quiet: <%= p('dojo.install.quiet') %> # DD_Quiet - Suppress normal output - only errors will be shown
   Trace: <%= p('dojo.install.trace') %> # DD_Trace - Boolean to enable the most verbose logging during install
   Redact: <%= p('dojo.install.redact') %> # DD_Redact - Boolean to redact sensitive info from the logs
