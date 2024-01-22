@@ -32,7 +32,7 @@ Install:
   Static: "<%= p('dojo.install.static') %>" # DD_Static - Directory in DD_Files for static asset files (JS, images, etc)
   App: "<%= p('dojo.install.app') %>" # DD_App - Directory in DD_Source where the DefectDojo Django app is located
   Sampledata: false # DD_Sampledata - Boolean for installing sample data during the install
-  PullSource: false # DD_PullSource - Boolean for installer to download source for DefectDojo Note: Usually for debugging the installer itself
+  PullSource: true # DD_PullSource - Boolean for installer to download source for DefectDojo Note: Usually for debugging the installer itself
   DB:
     Engine: "<%= p('dojo.db.engine') %>" # DD_DB_Engine - Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
     Local: <%= p('dojo.db.local') %> # DD_DB_Local - Boolean for when DB is on the same host/server/vm (local)
@@ -153,10 +153,6 @@ Settings:
 
 # These are optional config values that generally never need to be changed and are used while testing godojo
 # rather then actual installs
-Options:
-  HelpURL: "https://github.com/mtesauro/godojo" # DD_
-  ReleaseURL: "https://github.com/DefectDojo/django-DefectDojo/archive/" # DD_
+Optional:
   CloneURL: "https://github.com/dandersonsw/django-DefectDojo.git" # DD_
-  YarnGPG: "https://dl.yarnpkg.com/debian/pubkey.gpg" # DD_
-  YarnRepo: "deb https://dl.yarnpkg.com/debian/ stable main" # DD_
 
