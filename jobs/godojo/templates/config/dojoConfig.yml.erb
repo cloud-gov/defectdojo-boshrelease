@@ -23,7 +23,7 @@ Install:
   Trace: <%= p('dojo.install.trace') %> # DD_Trace - Boolean to enable the most verbose logging during install
   cloneURL: "https://github.com/dandersonsw/django-DefectDojo.git"
   Redact: <%= p('dojo.install.redact') %> # DD_Redact - Boolean to redact sensitive info from the logs
-  DevInstall: true # DD_Dev_Install - Boolean for development installs, uses fixed values
+  DevInstall: false # DD_Dev_Install - Boolean for development installs, uses fixed values
   Prompt: false # DD_Prompt - Boolean to prompt for configuration values - NOT IMPLEMENTED YET
   Mac: false # DD_Mac - Boolean to set the install target as a Mac - NOT IMPLEMENTED YET
   Root: "<%= p('dojo.install.root') %>" # DD_Root - Root directory for the DefectDojo app Note: No trailing /
