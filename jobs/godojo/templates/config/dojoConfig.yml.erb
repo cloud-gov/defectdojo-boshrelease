@@ -13,11 +13,17 @@
 # CredentialAES256Key
 # SecretKey
 
+# These are optional config values that generally never need to be changed and are used while testing godojo
+# rather then actual installs
+Options:
+  ReleaseURL: "https://github.com/dandersonsw/django-DefectDojo/archive"
+  CloneURL: "https://github.com/dandersonsw/django-DefectDojo.git" # DD_
+
 Install:
   Version: "<%= p('dojo.install.version') %>" # DD_Version - Release version of DefectDojo from Github Releases
-  SourceInstall: false # DD_SourceInstall - Boolean if a source install is desired (vs a release)
+  SourceInstall: true # DD_SourceInstall - Boolean if a source install is desired (vs a release)
   # If ^ is true, a souce code install will occur overriding the release version provided
-  SourceBranch: # DD_SourceBranch - The branch's HEAD to be checked out if SourceInstall is true
+  SourceBranch: oidc-login # DD_SourceBranch - The branch's HEAD to be checked out if SourceInstall is true
   SourceCommit: # DD_SourceCommit - If there is a value here, the specific commit will be used over the branch ^
   Quiet: <%= p('dojo.install.quiet') %> # DD_Quiet - Suppress normal output - only errors will be shown
   Trace: <%= p('dojo.install.trace') %> # DD_Trace - Boolean to enable the most verbose logging during install
@@ -150,10 +156,4 @@ Settings:
   UwsgiPort: "" # DD_UWSGI_PORT - Port for uwsgi
   Whitenoise: false # DD_WHITENOISE - Boolean to have whtienoise serve static files for DefectDojo
   Wkhtmltopdf: "/usr/local/bin/wkhtmltopdf" # DD_WKHTMLTOPDF - DEPRECATED
-
-# These are optional config values that generally never need to be changed and are used while testing godojo
-# rather then actual installs
-Options:
-  ReleaseURL: "https://github.com/dandersonsw/django-DefectDojo/releases"
-  CloneURL: "https://github.com/dandersonsw/django-DefectDojo.git" # DD_
 
