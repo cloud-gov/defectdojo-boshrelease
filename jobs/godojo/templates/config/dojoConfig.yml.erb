@@ -16,15 +16,15 @@
 # These are optional config values that generally never need to be changed and are used while testing godojo
 # rather then actual installs
 Options:
-  ReleaseURL: "https://github.com/dandersonsw/django-DefectDojo.git"
+  ReleaseURL: "https://github.com/dandersonsw/django-DefectDojo/archive/"
   CloneURL: "https://github.com/dandersonsw/django-DefectDojo.git" # DD_
 
 Install:
   Version: "<%= p('dojo.install.version') %>" # DD_Version - Release version of DefectDojo from Github Releases
-  SourceInstall: true # DD_SourceInstall - Boolean if a source install is desired (vs a release)
+  SourceInstall: false # DD_SourceInstall - Boolean if a source install is desired (vs a release)
   # If ^ is true, a souce code install will occur overriding the release version provided
-  SourceBranch: oidc-login # DD_SourceBranch - The branch's HEAD to be checked out if SourceInstall is true
-  SourceCommit: 00208b9575e92461aaebe0739bcb453b63e2f12c # DD_SourceCommit - If there is a value here, the specific commit will be used over the branch ^
+  SourceBranch:  # DD_SourceBranch - The branch's HEAD to be checked out if SourceInstall is true
+  SourceCommit:  # DD_SourceCommit - If there is a value here, the specific commit will be used over the branch ^
   Quiet: <%= p('dojo.install.quiet') %> # DD_Quiet - Suppress normal output - only errors will be shown
   Trace: <%= p('dojo.install.trace') %> # DD_Trace - Boolean to enable the most verbose logging during install
   Redact: <%= p('dojo.install.redact') %> # DD_Redact - Boolean to redact sensitive info from the logs
@@ -38,7 +38,7 @@ Install:
   Static: "<%= p('dojo.install.static') %>" # DD_Static - Directory in DD_Files for static asset files (JS, images, etc)
   App: "<%= p('dojo.install.app') %>" # DD_App - Directory in DD_Source where the DefectDojo Django app is located
   Sampledata: false # DD_Sampledata - Boolean for installing sample data during the install
-  PullSource: true # DD_PullSource - Boolean for installer to download source for DefectDojo Note: Usually for debugging the installer itself
+  PullSource: false # DD_PullSource - Boolean for installer to download source for DefectDojo Note: Usually for debugging the installer itself
   DB:
     Engine: "<%= p('dojo.db.engine') %>" # DD_DB_Engine - Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
     Local: <%= p('dojo.db.local') %> # DD_DB_Local - Boolean for when DB is on the same host/server/vm (local)
