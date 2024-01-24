@@ -12,6 +12,9 @@ packages:
   - godojo
 
 properties:
+  dojo.install.site_url:
+    description: |
+      Valid domains for this site
   dojo.install.version:
     description: |
       Release version of DefectDojo from Github Releases
