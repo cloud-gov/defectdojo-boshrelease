@@ -128,3 +128,6 @@ properties:
   dojo.auth.oidc_secret:
     description: |
       OIDC auth secret
+  dojo.auth.oidc_username_key:
+    description: |
+      OIDC username key
