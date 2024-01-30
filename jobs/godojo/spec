@@ -122,3 +122,9 @@ properties:
   dojo.auth.remoteuser_username_header:
     description: |
       Header that containers the username
+  dojo.auth.remoteuser_email_header:
+    description: |
+      Header that containers the user email
+  dojo.auth.remoteuser_trusted_proxy:
+    description: |
+      IP address of the trusted proxies
