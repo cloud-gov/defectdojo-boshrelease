@@ -122,6 +122,9 @@ properties:
   dojo.auth.oidc_endpoint:
     description: |
       OIDC endpoint
+  dojo.auth.oidc_id_key:
+    description: |
+      The key used to associate users
   dojo.auth.oidc_key:
     description: |
       OIDC auth client
