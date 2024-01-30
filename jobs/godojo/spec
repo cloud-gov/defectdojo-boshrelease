@@ -119,18 +119,6 @@ properties:
   dojo.csrf.trusted_origins:
     description: |
       Trusted origins for csrf
-  dojo.auth.oidc_endpoint:
+  dojo.auth.remoteuser_username_header:
     description: |
-      OIDC endpoint
-  dojo.auth.oidc_key:
-    description: |
-      OIDC auth client
-  dojo.auth.oidc_secret:
-    description: |
-      OIDC auth secret
-  dojo.auth.oidc_username_key:
-    description: |
-      OIDC username key
-  dojo.auth.oidc_whitelisted_domains:
-    description: |
-      List of domains allowed to login
+      Header that containers the username
