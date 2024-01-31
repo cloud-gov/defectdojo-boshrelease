@@ -134,3 +134,6 @@ properties:
   dojo.auth.oidc_username_key:
     description: |
       OIDC username key
+  dojo.auth.oidc_whitelisted_domains:
+    description: |
+      List of domains allowed for login
