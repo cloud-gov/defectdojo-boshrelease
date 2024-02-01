@@ -146,9 +146,6 @@ properties:
   dojo.auth.oidc_authorization_url:
     description: |
       OIDC Authorization URL
-  dojo.auth.oidc_revoke_token_url:
-    description: |
-      OIDC Revoke Token URL
   dojo.auth.oidc_userinfo_url:
     description: |
       OIDC Userinfo URL
