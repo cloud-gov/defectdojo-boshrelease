@@ -152,3 +152,6 @@ properties:
   dojo.auth.oidc_jwks_uri:
     description: |
       OIDC JWKS URI
+  dojo.auth.oidc_extra_data:
+    description: |
+      Extra data to provide OIDC calls
