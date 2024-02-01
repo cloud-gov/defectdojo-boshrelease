@@ -137,3 +137,21 @@ properties:
   dojo.auth.oidc_whitelisted_domains:
     description: |
       List of domains allowed for login
+  dojo.auth.oidc_token_issuer:
+    description: |
+      OIDC Token Issuer URL
+  dojo.auth.oidc_access_token_url:
+    description: |
+      OIDC Access Token URL
+  dojo.auth.oidc_authorization_url:
+    description: |
+      OIDC Authorization URL
+  dojo.auth.oidc_revoke_token_url:
+    description: |
+      OIDC Revoke Token URL
+  dojo.auth.oidc_userinfo_url:
+    description: |
+      OIDC Userinfo URL
+  dojo.auth.oidc_jwks_uri:
+    description: |
+      OIDC JWKS URI
