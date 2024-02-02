@@ -164,6 +164,6 @@ properties:
   dojo.auth.remoteuser_firstname_header:
     description: |
       First name header
-  dojo.auth.remoteuser_lastname_header
+  dojo.auth.remoteuser_lastname_header:
     description: |
       Last name header
