@@ -1,0 +1,15 @@
+---
+name: nginx_dojo
+
+templates:
+  bin/nginx_dojo_ctl: bin/nginx_dojo_ctl
+  config/nginx.conf: config/nginx.conf
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+
+packages:
+  - nginx
+
+properties:
+  nginx.server_name:
+    description: |
+      Server name that proxy will listen on
