@@ -155,3 +155,15 @@ properties:
   dojo.auth.oidc_extra_data:
     description: |
       Extra data to provide OIDC calls
+  dojo.auth.remoteuser_username_header:
+    description: |
+      Username header
+  dojo.auth.remoteuser_email_header:
+    description: |
+      Email header
+  dojo.auth.remoteuser_firstname_header:
+    description: |
+      First name header
+  dojo.auth.remoteuser_lastname_header
+    description: |
+      Last name header
