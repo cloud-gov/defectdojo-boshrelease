@@ -14,10 +14,10 @@ source /var/vcap/jobs/godojo/config/dojo.env
 export PATH=/var/vcap/jobs/godojo/bin:${PATH}
 
 #start celery workers
-C_FORCE_ROOT="true" celery -A dojo worker -l info --concurrency 3 &
+C_FORCE_ROOT="true" celery -A dojo worker -l info --concurrency=10 --pool prefork --autoscale=8,2 --prefetch-multiplier=128 &
 
 # Startup the Celery beat process
 C_FORCE_ROOT="true" celery --app dojo beat -l info &
 
 # Startup DefectDojo on port 8001
-uwsgi --http :8001 --module dojo.wsgi --buffer-size 6144
+uwsgi --http :8001 --module dojo.wsgi --buffer-size 6144 -p 2 -T --threads 10
