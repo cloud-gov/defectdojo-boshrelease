@@ -1,8 +1,8 @@
-godojo/godojo-v1.2.3_standard.zip:
-  size: 8507110
-  object_id: fc36fe14-b51a-4ea9-4a89-2ab92ddac7ea
-  sha: sha256:86a5c3c43a72d72f1330e11885cda1fcc6059e5c8fe242c5f09aed737de86637
 godojo/godojo-v1.2.4_standard.zip:
   size: 8507130
   object_id: 302af583-c974-40ee-4059-8dee31e1ba07
   sha: sha256:a893b291d152f171241b2277931c619d74f24e17e2bf49a7db22fc1ddb2732d2
+godojo/godojo-v1.2.5_standard.zip:
+  size: 9085462
+  object_id: 588b8435-0831-4254-5d18-355f19f56511
+  sha: sha256:e7cfb9efe36ded62482bea407ce85409b42aeace182808a090c6314a6915c975
