@@ -6,6 +6,6 @@ apt-get -y update
 apt-get -y install --no-install-recommends \
   unzip \
 
-unzip godojo/godojo-v1.2.5_standard.zip
+unzip godojo/godojo-v1.2.6_standard.zip
 
 cp standard/godojo ${BOSH_INSTALL_TARGET}/godojo
