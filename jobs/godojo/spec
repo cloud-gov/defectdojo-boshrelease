@@ -55,6 +55,10 @@ properties:
     description: |
       Directory in DD_Source where the DefectDojo Django app is located
     default: "dojo"
+  dojo.settings.debug:
+    description: |
+      Turn debugging off or on
+    default: False
   dojo.db.engine:
     description: |
       Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
