@@ -59,6 +59,10 @@ properties:
     description: |
       Turn debugging off or on
     default: False
+  dojo.settings.email_url:
+    description: |
+      The url that will be used by defectdojo to send email notifications
+    default: "smtp://user@:password@localhost:25"
   dojo.db.engine:
     description: |
       Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
