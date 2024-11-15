@@ -17,7 +17,7 @@ env = environ.Env(
     DD_SOCIAL_AUTH_OIDC_AUTHORIZATION_URL=(str, ''),
     DD_SOCIAL_AUTH_OIDC_USERINFO_URL=(str, ''),
     DD_SOCIAL_AUTH_OIDC_JWKS_URI=(str, ''),
-) + env
+)
 
 AUTHENTICATION_BACKENDS += (
     'social_core.backends.open_id_connect.OpenIdConnectAuth',
