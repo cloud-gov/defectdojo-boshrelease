@@ -5,9 +5,9 @@ set -u # report the usage of uninitialized variables
 
 export GIT_PYTHON_REFRESH=quiet
 
-mv -f /var/vcap/jobs/godojo/config/local_settings.py /var/vcap/jobs/godojo/django-DefectDojo/dojo/settings/local_settings.py
-mv -f /var/vcap/jobs/godojo/config/login.html /var/vcap/jobs/godojo/django-DefectDojo/dojo/templates/dojo/login.html
-mv -f /var/vcap/jobs/godojo/config/user_views.py /var/vcap/jobs/godojo/django-DefectDojo/dojo/user/views.py
+cp -f /var/vcap/jobs/godojo/config/local_settings.py /var/vcap/jobs/godojo/django-DefectDojo/dojo/settings/local_settings.py
+cp -f /var/vcap/jobs/godojo/config/login.html /var/vcap/jobs/godojo/django-DefectDojo/dojo/templates/dojo/login.html
+cp -f /var/vcap/jobs/godojo/config/user_views.py /var/vcap/jobs/godojo/django-DefectDojo/dojo/user/views.py
 
 cd /var/vcap/jobs/godojo/django-DefectDojo
 
