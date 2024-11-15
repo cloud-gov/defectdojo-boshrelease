@@ -1,24 +1,6 @@
 # local_settings.py
 # this file will be included by settings.py *after* loading settings.dist.py
 
-import environ
-
-env += environ.Env(
-    DD_SOCIAL_AUTH_OIDC_AUTH_ENABLED=(bool, False),
-    DD_SOCIAL_AUTH_OIDC_OIDC_ENDPOINT=(str, ''),
-    DD_SOCIAL_AUTH_OIDC_ID_KEY=(str, ''),
-    DD_SOCIAL_AUTH_OIDC_KEY=(str, ''),
-    DD_SOCIAL_AUTH_OIDC_SECRET=(str, ''),
-    DD_SOCIAL_AUTH_OIDC_USERNAME_KEY=(str, ''),
-    DD_SOCIAL_AUTH_OIDC_WHITELISTED_DOMAINS=(list, ['']),
-    DD_SOCIAL_AUTH_OIDC_JWT_ALGORITHMS=(list, ["RS256","HS256"]),
-    DD_SOCIAL_AUTH_OIDC_ID_TOKEN_ISSUER=(str, ''),
-    DD_SOCIAL_AUTH_OIDC_ACCESS_TOKEN_URL=(str, ''),
-    DD_SOCIAL_AUTH_OIDC_AUTHORIZATION_URL=(str, ''),
-    DD_SOCIAL_AUTH_OIDC_USERINFO_URL=(str, ''),
-    DD_SOCIAL_AUTH_OIDC_JWKS_URI=(str, ''),
-)
-
 AUTHENTICATION_BACKENDS += (
     'social_core.backends.open_id_connect.OpenIdConnectAuth',
 )
