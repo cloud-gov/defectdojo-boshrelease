@@ -13,6 +13,12 @@ processes:
       writable: true
     - path: /var/vcap/jobs/godojo/django-DefectDojo
       writable: true
+    - path: /var/vcap/jobs/godojo/django-Defectdojo/dojo/settings
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo/dojo/templates/dojo
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo/dojo/user
+      writable: true
     - path: /var/vcap/jobs/godojo/logs
       writable: true
     capabilities:
