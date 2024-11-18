@@ -3,6 +3,8 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
+DEBIAN_FRONTEND=noninteractive apt-get install -y libpq-dev
+
 cd /var/vcap/jobs/godojo/bin
 /var/vcap/jobs/godojo/packages/godojo/godojo
 
