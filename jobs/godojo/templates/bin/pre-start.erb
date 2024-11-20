@@ -5,8 +5,8 @@ set -u # report the usage of uninitialized variables
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y libpq-dev python3.11
 
-alias python=python3.11
-alias pip="python3.11 -m pip"
+alias python='python3.11'
+alias pip='python3.11 -m pip'
 
 cd /var/vcap/jobs/godojo/bin
 PYPATH="/usr/bin/python3.11" /var/vcap/jobs/godojo/packages/godojo/godojo
