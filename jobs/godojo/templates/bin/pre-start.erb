@@ -3,9 +3,72 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y libpq-dev python3.11
+DEBIAN_FRONTEND=noninteractive
 
-DEBIAN_FRONTEND=noninteractive apt-get remove -y libnode72
+set +e                                                                               # Need to turn this off so retry will be allowed
+
+COMMAND="apt-get install -y libpq-dev python3.11"                                    # Command to execute
+MAX_RETRIES=3                                                                        # Maximum number of retries
+DELAY=5                                                                              # Delay between retries in seconds
+ATTEMPT=0                                                                            # Initialize counter
+
+echo "Attempting to install libpq-dev python3.11..."
+# Execute the command with retries
+while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+    ((ATTEMPT++))
+    echo "Attempt $ATTEMPT: Running '$COMMAND'..."
+    
+    # Run the command
+    $COMMAND
+    
+    # Check if the command succeeded
+    if [ $? -eq 0 ]; then
+        echo "Command succeeded on attempt $ATTEMPT."
+        break
+    else
+        echo "Command failed on attempt $ATTEMPT."
+        if [ $ATTEMPT -lt $MAX_RETRIES ]; then
+            echo "Retrying in $DELAY seconds..."
+            sleep $DELAY
+        else
+            echo "Command failed after $MAX_RETRIES attempts, terminating install..."
+            exit 1
+        fi
+    fi
+done
+
+
+COMMAND="apt-get remove -y libnode72"                                                # Command to execute
+MAX_RETRIES=3                                                                        # Maximum number of retries
+DELAY=5                                                                              # Delay between retries in seconds
+ATTEMPT=0                                                                            # Initialize counter
+
+echo "Attempting to remove libnode72..."
+# Execute the command with retries
+while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+    ((ATTEMPT++))
+    echo "Attempt $ATTEMPT: Running '$COMMAND'..."
+    
+    # Run the command
+    $COMMAND
+    
+    # Check if the command succeeded
+    if [ $? -eq 0 ]; then
+        echo "Command succeeded on attempt $ATTEMPT."
+        break
+    else
+        echo "Command failed on attempt $ATTEMPT."
+        if [ $ATTEMPT -lt $MAX_RETRIES ]; then
+            echo "Retrying in $DELAY seconds..."
+            sleep $DELAY
+        else
+            echo "Command failed after $MAX_RETRIES attempts, terminating install..."
+            exit 1
+        fi
+    fi
+done
+
+set -e                                                     # Retry is complete, re-enable
 
 cd /var/vcap/jobs/godojo/bin
 PYPATH="/usr/bin/python3.11" /var/vcap/jobs/godojo/packages/godojo/godojo
