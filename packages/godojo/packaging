@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e # exit immediately if a simple command exits with a non-zero status
+set -u # report the usage of uninitialized variables
+
+apt-get -y update
+apt-get -y install --no-install-recommends \
+  unzip \
+
+unzip godojo/godojo-v1.2.7_standard.zip
+
+cp standard/godojo ${BOSH_INSTALL_TARGET}/godojo

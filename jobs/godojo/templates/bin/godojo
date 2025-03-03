@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e # exit immediately if a simple command exits with a non-zero status
+set -u # report the usage of uninitialized variables
+
+export GIT_PYTHON_REFRESH=quiet
+
+cp -f /var/vcap/jobs/godojo/config/local_settings.py /var/vcap/jobs/godojo/django-DefectDojo/dojo/settings/local_settings.py
+cp -f /var/vcap/jobs/godojo/config/login.html /var/vcap/jobs/godojo/django-DefectDojo/dojo/templates/dojo/login.html
+cp -f /var/vcap/jobs/godojo/config/user_views.py /var/vcap/jobs/godojo/django-DefectDojo/dojo/user/views.py
+
+cd /var/vcap/jobs/godojo/django-DefectDojo
+
+#use godojo env
+source /var/vcap/jobs/godojo/bin/activate
+source /var/vcap/jobs/godojo/config/dojo.env
+
+export PATH=/var/vcap/jobs/godojo/bin:${PATH}
+
+#start celery workers
+C_FORCE_ROOT="true" celery -A dojo worker -l info --pool prefork &
+
+# Startup the Celery beat process
+C_FORCE_ROOT="true" celery --app dojo beat -l info &
+
+# Startup DefectDojo on port 8001
+uwsgi --socket dojo.sock --wsgi-file wsgi.py --buffer-size 6144 -p 2 -T --threads 10

@@ -1,0 +1,165 @@
+---
+name: godojo
+
+templates:
+  bin/godojo: bin/godojo.sh
+  bin/pre-start.erb: bin/pre-start
+  config/bpm.yml.erb: config/bpm.yml
+  config/dojo.env.erb: config/dojo.env
+  config/dojoConfig.yml.erb: bin/dojoConfig.yml
+  config/local_settings.py: config/local_settings.py
+  config/login.html: config/login.html
+  config/user_views.py: config/user_views.py
+
+packages:
+  - godojo
+
+properties:
+  dojo.install.site_url:
+    description: |
+      Valid domains for this site
+  dojo.install.version:
+    description: |
+      Release version of DefectDojo from Github Releases
+    default: "2.27.4"
+  dojo.install.quiet:
+    description: |
+      Suppress normal output - only errors will be shown
+    default: true
+  dojo.install.trace:
+    description: |
+      Boolean to enable the most verbose logging during install
+    default: false
+  dojo.install.redact:
+    description: |
+      Boolean to redact sensitive info from the logs
+    default: true
+  dojo.install.root:
+    description: |
+      Root directory for the DefectDojo app Note: No trailing /
+    default: "/var/vcap/jobs/godojo"
+  dojo.install.source:
+    description: |
+      Directory in DD_Root for DefectDojo source code
+    default: "django-DefectDojo"
+  dojo.install.files:
+    description: |
+      Directory in DD_Root for local files (static assets, uploads, etc)
+    default: "django-DefectDojo"
+  dojo.install.media:
+    description: |
+      Directory in DD_Files for uploaded files (screenshots, test artifacts, etc)
+    default: "media"
+  dojo.install.static:
+    description: |
+      Directory in DD_Files for static asset files (JS, images, etc)
+    default: "static"
+  dojo.install.app:
+    description: |
+      Directory in DD_Source where the DefectDojo Django app is located
+    default: "dojo"
+  dojo.settings.debug:
+    description: |
+      Turn debugging off or on
+    default: False
+  dojo.settings.email_url:
+    description: |
+      The url that will be used by defectdojo to send email notifications
+    default: "smtp://user@:password@localhost:25"
+  dojo.db.engine:
+    description: |
+      Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
+    default: "PostgreSQL"
+  dojo.db.local:
+    description: |
+      Boolean for when DB is on the same host/server/vm
+    default: true
+  dojo.db.exists:
+    description: |
+      Boolean for when DB for DefectDojo already exists so no install needed
+    default: false
+  dojo.db.ruser:
+    description: |
+      Superuser for the database
+  dojo.db.rpass:
+    description: |
+      Password for the database superuser
+  dojo.db.name:
+    description: |
+      Name of the database that DefectDojo will use
+    default: dojodb
+  dojo.db.user:
+    description: |
+      Username of the database user that DefectDojo will use
+  dojo.db.pass:
+    description: |
+      Password for the database user DefectDojo will use
+  dojo.db.host:
+    description: |
+      Database hostname
+    default: localhost
+  dojo.db.port:
+    description: |
+      Port the database is listening on
+    default: 5432
+  dojo.db.drop:
+    description: |
+      Boolean to tell the installer to drop an existing DB if found
+    default: false
+  dojo.os.user:
+    description: |
+      OS user to own the DefectDojo instll and files
+  dojo.os.pass:
+    description: |
+      Password for the OS user for DefectDojo
+  dojo.os.group:
+    description: |
+      OS Group to own the DefectDojo install and files
+  dojo.os.uid:
+    description: |
+      User ID for the DefectDojo OS user
+  dojo.os.gid:
+    description: |
+      Group ID for the DefectDojo OS group
+  dojo.admin.user:
+    description: |
+      Admin user for the DefectDojo web app
+  dojo.admin.pass:
+    description: |
+      Password for the DefectDojo web app admin user
+  dojo.csrf.trusted_origins:
+    description: |
+      Trusted origins for csrf
+  dojo.auth.oidc_endpoint:
+    description: |
+      OIDC endpoint
+  dojo.auth.oidc_id_key:
+    description: |
+      The key used to associate users
+  dojo.auth.oidc_key:
+    description: |
+      OIDC auth client
+  dojo.auth.oidc_secret:
+    description: |
+      OIDC auth secret
+  dojo.auth.oidc_username_key:
+    description: |
+      OIDC username key
+  dojo.auth.oidc_whitelisted_domains:
+    description: |
+      List of domains allowed for login
+  dojo.auth.oidc_token_issuer:
+    description: |
+      OIDC Token Issuer URL
+  dojo.auth.oidc_access_token_url:
+    description: |
+      OIDC Access Token URL
+  dojo.auth.oidc_authorization_url:
+    description: |
+      OIDC Authorization URL
+  dojo.auth.oidc_userinfo_url:
+    description: |
+      OIDC Userinfo URL
+  dojo.auth.oidc_jwks_uri:
+    description: |
+      OIDC JWKS URI

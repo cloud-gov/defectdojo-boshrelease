@@ -1,0 +1,29 @@
+processes:
+  - name: godojo
+    executable: /var/vcap/jobs/godojo/bin/godojo.sh
+    persistent_disk: true
+    ephemeral_disk: true
+    additional_volumes:
+    - path: /var/vcap/sys/tmp/godojo
+      writable: true
+      allow_executions: true
+    - path: /var/vcap/jobs/godojo
+      writeable: true
+    - path: /var/vcap/jobs/godojo/config
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo/dojo
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo/dojo/settings
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo/dojo/templates
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo/dojo/templates/dojo
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo/dojo/user
+      writable: true
+    - path: /var/vcap/jobs/godojo/logs
+      writable: true
+    capabilities:
+    - SYS_RESOURCE
