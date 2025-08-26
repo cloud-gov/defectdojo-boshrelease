@@ -63,6 +63,10 @@ properties:
     description: |
       The url that will be used by defectdojo to send email notifications
     default: "smtp://user@:password@localhost:25"
+  dojo.settings.scan_file_max_size:
+    description: |
+      The max file size for imported scans in MB
+    default: 100
   dojo.db.engine:
     description: |
       Database engine to use (SQLite, MySQL, PostgreSQL, MariaDB) Note: CASE sEnSiTiVE!
