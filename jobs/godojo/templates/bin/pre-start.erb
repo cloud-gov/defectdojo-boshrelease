@@ -37,6 +37,61 @@ while [ $ATTEMPT -lt $MAX_RETRIES ]; do
     fi
 done
 
+COMMAND="add-apt-repository ppa:deadsnakes/ppa"                                                             # Command to execute
+MAX_RETRIES=3                                                                        # Maximum number of retries
+DELAY=5                                                                              # Delay between retries in seconds
+ATTEMPT=0                                                                            # Initialize counter
+
+echo "Attempting to run add-apt-repository..."
+# Execute the command with retries
+while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+    ((ATTEMPT++))
+    echo "Attempt $ATTEMPT: Running '$COMMAND'..."
+
+    # Run the command
+    $COMMAND
+
+    # Check if the command succeeded
+    if [ $? -eq 0 ]; then
+        echo "Command succeeded on attempt $ATTEMPT."
+        break
+    else
+        echo "Command failed on attempt $ATTEMPT."
+        if [ $ATTEMPT -lt $MAX_RETRIES ]; then
+            echo "Retrying in $DELAY seconds..."
+            sleep $DELAY
+        else
+            echo "Command failed after $MAX_RETRIES attempts, terminating install..."
+            exit 1
+        fi
+    fi
+done
+
+echo "Attempting to run apt-get update..."
+# Execute the command with retries
+while [ $ATTEMPT -lt $MAX_RETRIES ]; do
+    ((ATTEMPT++))
+    echo "Attempt $ATTEMPT: Running '$COMMAND'..."
+
+    # Run the command
+    $COMMAND
+
+    # Check if the command succeeded
+    if [ $? -eq 0 ]; then
+        echo "Command succeeded on attempt $ATTEMPT."
+        break
+    else
+        echo "Command failed on attempt $ATTEMPT."
+        if [ $ATTEMPT -lt $MAX_RETRIES ]; then
+            echo "Retrying in $DELAY seconds..."
+            sleep $DELAY
+        else
+            echo "Command failed after $MAX_RETRIES attempts, terminating install..."
+            exit 1
+        fi
+    fi
+done
+
 COMMAND="apt-get install -y libpq-dev python3.12"                                    # Command to execute
 MAX_RETRIES=3                                                                        # Maximum number of retries
 DELAY=5                                                                              # Delay between retries in seconds
