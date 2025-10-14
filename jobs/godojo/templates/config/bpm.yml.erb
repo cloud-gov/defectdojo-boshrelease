@@ -27,3 +27,39 @@ processes:
       writable: true
     capabilities:
     - SYS_RESOURCE
+  - name: celeryworker
+    executable: /var/vcap/jobs/godojo/bin/celeryworker.sh
+    additional_volumes:
+    - path: /var/vcap/sys/tmp/godojo
+      writable: true
+      allow_executions: true
+    - path: /var/vcap/jobs/godojo
+      writeable: true
+    - path: /var/vcap/jobs/godojo/config
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo
+      writable: true
+    - path: /var/vcap/jobs/godojo/bin
+      writeable: true
+      allow_executions: true
+    - path: /var/vcap/data/jobs/godojo
+      writeable: true
+      allow_executions: true
+  - name: celerybeat
+    executable: /var/vcap/jobs/godojo/bin/celerybeat.sh
+    additional_volumes:
+    - path: /var/vcap/sys/tmp/godojo
+      writable: true
+      allow_executions: true
+    - path: /var/vcap/jobs/godojo
+      writeable: true
+    - path: /var/vcap/jobs/godojo/config
+      writable: true
+    - path: /var/vcap/jobs/godojo/django-DefectDojo
+      writable: true
+    - path: /var/vcap/jobs/godojo/bin
+      writeable: true
+      allow_executions: true
+    - path: /var/vcap/data/jobs/godojo
+      writeable: true
+      allow_executions: true

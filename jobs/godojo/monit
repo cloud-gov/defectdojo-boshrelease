@@ -9,3 +9,15 @@ check device os-ephemeral_disk with path /var/vcap/data
 
 check device os-persistent_disk with path /var/vcap/store
   if SPACE usage > 80% then alert
+
+check process celeryworker
+  with pidfile /var/vcap/sys/run/bpm/godojo/celeryworker.pid
+  start program "/var/vcap/jobs/bpm/bin/bpm start godojo -p celeryworker"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop godjo -p celeryworker"
+  group vcap
+
+check process celerybeat
+  with pidfile /var/vcap/sys/run/bpm/godojo/celerybeat.pid
+  start program "/var/vcap/jobs/bpm/bin/bpm start godojo -p celerybeat"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop godjo -p celerybeat"
+  group vcap

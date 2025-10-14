@@ -3,7 +3,10 @@ name: godojo
 
 templates:
   bin/godojo: bin/godojo.sh
+  bin/celeryworker: bin/celeryworker.sh
+  bin/celerybeat: bin/celerybeat.sh
   bin/pre-start.erb: bin/pre-start
+  bin/drain.erb: bin/drain
   config/bpm.yml.erb: config/bpm.yml
   config/dojo.env.erb: config/dojo.env
   config/dojoConfig.yml.erb: bin/dojoConfig.yml

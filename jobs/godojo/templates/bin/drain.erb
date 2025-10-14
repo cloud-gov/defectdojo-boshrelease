@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# check if the process is running
+pid_path=/var/vcap/sys/run/bpm/godojo/celerybeat.pid
+if [ ! -f "$pid_path" ]; then echo 0; exit 0; fi
+pid=$(<"$pid_path")
+if ! ps -p "$pid" >/dev/null; then echo 0; exit 0; fi
+
+kill -9 $pid
+
+# check if the process is running
+pid_path=/var/vcap/sys/run/bpm/godojo/celeryworker.pid
+if [ ! -f "$pid_path" ]; then echo 0; exit 0; fi
+pid=$(<"$pid_path")
+if ! ps -p "$pid" >/dev/null; then echo 0; exit 0; fi
+
+kill -9 $pid
+
+echo 0; exit 0
