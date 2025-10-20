@@ -9,9 +9,8 @@ cd /var/vcap/jobs/godojo/django-DefectDojo
 
 #use godojo env
 source /var/vcap/jobs/godojo/bin/activate
-source /var/vcap/jobs/godojo/config/dojo.env
 
 export PATH=/var/vcap/jobs/godojo/bin:${PATH}
 
-# Startup webserver using socket
-uwsgi --socket dojo.sock --wsgi-file wsgi.py --buffer-size 6144 -p 2 -T --threads 10
+# Startup the Celery beat process
+celery --app dojo beat -l info
