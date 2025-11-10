@@ -13,4 +13,4 @@ source /var/vcap/jobs/godojo/bin/activate
 export PATH=/var/vcap/jobs/godojo/bin:${PATH}
 
 #start celery workers
-celery --app=dojo worker --loglevel "info" --pool "prefork" --concurrency "4"
+celery --app=dojo worker --loglevel "info" --pool "prefork" --concurrency "2"
