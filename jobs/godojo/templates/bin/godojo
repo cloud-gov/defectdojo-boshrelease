@@ -14,4 +14,4 @@ source /var/vcap/jobs/godojo/config/dojo.env
 export PATH=/var/vcap/jobs/godojo/bin:${PATH}
 
 # Startup webserver using socket
-uwsgi --socket dojo.sock --wsgi-file wsgi.py --buffer-size 6144 -p 2 -T --threads 10
+uwsgi --socket dojo.sock --wsgi-file dojo/wsgi.py --buffer-size 6144 -p 2 -T --threads 10
