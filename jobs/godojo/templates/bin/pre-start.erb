@@ -92,12 +92,12 @@ while [ $ATTEMPT -lt $MAX_RETRIES ]; do
     fi
 done
 
-COMMAND="apt-get install -y libpq-dev python3.12"                                    # Command to execute
+COMMAND="apt-get install -y libpq-dev python3.13"                                    # Command to execute
 MAX_RETRIES=3                                                                        # Maximum number of retries
 DELAY=5                                                                              # Delay between retries in seconds
 ATTEMPT=0                                                                            # Initialize counter
 
-echo "Attempting to install libpq-dev python3.12..."
+echo "Attempting to install libpq-dev python3.13..."
 # Execute the command with retries
 while [ $ATTEMPT -lt $MAX_RETRIES ]; do
     ((ATTEMPT++))
@@ -156,4 +156,4 @@ done
 set -e                                                     # Retry is complete, re-enable
 
 cd /var/vcap/jobs/godojo/bin
-PYPATH="/usr/bin/python3.12" /var/vcap/jobs/godojo/packages/godojo/godojo
+PYPATH="/usr/bin/python3.13" /var/vcap/jobs/godojo/packages/godojo/godojo
