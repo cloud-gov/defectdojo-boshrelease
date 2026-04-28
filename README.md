@@ -17,6 +17,7 @@ We currently use DefectDojo to consolidate and analyze the Grype CVE scans of ou
 The bosh release blobs are handled in the same manner as other blobs used by Cloud.gov.
 
 The `godojo` job is responsible for running the godojo installer for setting up DefectDojo.
+
 The `nginx_dojo` job is responsible for setting up the nginx server.
 
 All credentials and secrets are defined using `Credhub` values.
