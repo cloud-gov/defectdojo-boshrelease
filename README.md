@@ -1,6 +1,6 @@
 # defectdojo-boshrelease
 
-This is a bosh release for deploying DefectDojo. It incorporates a fork of the (godojo)[https://github.com/cloud-gov/godojo] installer for DefectDojo. When deployed, this bosh release brings up a working DefectDojo server with a postgres db, celery workers, and a uwsgi server backed by nginx.
+This is a bosh release for deploying DefectDojo. It incorporates a fork of the [godojo](https://github.com/cloud-gov/godojo) installer for DefectDojo. When deployed, this bosh release brings up a working DefectDojo server with a postgres db, celery workers, and a uwsgi server backed by nginx.
 
 ## Why DefectDojo?
 
