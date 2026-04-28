@@ -10,7 +10,7 @@ To comply with security and compliance requirements, such as container scanning,
 
 ## Current Usage
 
-We currently use DefectDojo to consolidate and analyze the grype CVE scans of our container images, as well as the Nessus Vulnerability scans for our VMs.
+We currently use DefectDojo to consolidate and analyze the Grype CVE scans of our container images, as well as the Nessus Vulnerability scans for our VMs.
 
 ## Notes
 
